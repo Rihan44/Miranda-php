@@ -146,6 +146,18 @@ main {
               line-height: 18px;
               color: rgba(189, 189, 189, 1);
               border: none;
+              transition: 0.5s;
+              border: 2px solid rgba(190, 173, 142, 1);
+
+              &:hover {
+                color: rgba(190, 173, 142, 1);
+                border-bottom: 2px solid rgba(190, 173, 142, 1);
+              }
+
+              a {
+                color: rgba(189, 189, 189, 1);
+                background: none;
+              }
             }
           }
         }

@@ -3694,7 +3694,6 @@ main section.luxury-rooms-offers button.luxury-rooms-offers-container__button {
   margin-left: 20px;
   cursor: pointer;
   border: none;
-  color: rgb(255, 255, 255);
   font-size: 0.875em;
   letter-spacing: 2.8px;
   text-transform: uppercase;
@@ -3702,6 +3701,16 @@ main section.luxury-rooms-offers button.luxury-rooms-offers-container__button {
   font-weight: 700;
   background: rgb(190, 173, 142);
   align-self: baseline;
+  border: 2px solid rgba(190, 173, 142, 1);
+  transition: 0.5s;
+}
+main section.luxury-rooms-offers button.luxury-rooms-offers-container__button:hover {
+  background-color: rgba(51, 51, 51, 1);
+  border: 2px solid gray;
+}
+main section.luxury-rooms-offers button.luxury-rooms-offers-container__button a {
+  color: #fff;
+  background: none;
 }
 main section.luxury-rooms-offers div.luxury-rooms-offers-container__info-price {
   width: 100%;
@@ -4000,8 +4009,17 @@ main section.popular-rooms div.rooms-list__room div#swipper-rooms-offers div.box
   line-height: 18px;
   color: rgb(189, 189, 189);
   border: none;
+  transition: 0.5s;
+  border: 2px solid rgba(190, 173, 142, 1);
 }
-
+main section.popular-rooms div.rooms-list__room div#swipper-rooms-offers div.box-container div.rooms-list-room__price-info button.rooms-list-room-price-info__button a {
+  color: rgba(189, 189, 189, 1);
+  background: none;
+}
+main section.popular-rooms div.rooms-list__room div#swipper-rooms-offers div.box-container div.rooms-list-room__price-info button.rooms-list-room-price-info__button a:hover {
+  color: rgba(190, 173, 142, 1);
+  border-bottom: 2px solid rgba(190, 173, 142, 1);
+}
 @media screen and (min-width: 1000px) {
   main section.popular-rooms div.rooms-list__room {
     width: 80%;
