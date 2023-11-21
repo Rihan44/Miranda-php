@@ -91,31 +91,22 @@
  </div>
  <div class="swiper" id="swipper-rooms">
  <div class="swiper-wrapper">
- <div class="swiper-slide slide-img1">
- <img class="swiper-slide__img" src="img/slider-rooms1.jpeg" alt="img1" />
- </div>
- <div class="swiper-slide slide-img2">
- <img class="swiper-slide__img" src="img/slider-rooms2.jpg" alt="img2" />
- </div>
- <div class="swiper-slide slide-img3">
- <img class="swiper-slide__img" src="img/slider-rooms3.jpg" alt="img3" />
- </div>
+ <?php $__currentLoopData = $rooms; $this->addLoop($__currentLoopData);$this->getFirstLoop();
+ foreach($__currentLoopData as $room): $loop = $this->incrementLoopIndices();  ?>
  <div class="swiper-slide slide-img4">
- <img class="swiper-slide__img" src="img/slider-rooms4.jpg" alt="img4" />
+ <img class="swiper-slide__img" src="<?php echo \htmlentities($room['URL']??'', ENT_QUOTES, 'UTF-8', false); ?>" alt="img<?php echo \htmlentities($room['id']??'', ENT_QUOTES, 'UTF-8', false); ?>" />
+ <div class="discover-rooms__minimal">
+ <div class="discover-rooms-minimal__info-container">
+ <h3 class="discover-rooms-minimal__h3"><?php echo \htmlentities($room['room_type']??'', ENT_QUOTES, 'UTF-8', false); ?></h3>
+ <p class="discover-rooms-minimal__paraph"><?php echo \htmlentities($room['description']??'', ENT_QUOTES, 'UTF-8', false); ?></p>
  </div>
+ <h2 class="discover-rooms-minimal__h2">$<?php echo \htmlentities($room['price']??'', ENT_QUOTES, 'UTF-8', false); ?><span class="discover-rooms-minimal-h2__span">/Night</span></h2>
+ </div>
+ </div>
+ <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
  </div>
  <div class="swiper-button-prev" id="swiper-button-prev-rooms"></div>
  <div class="swiper-button-next" id="swiper-button-next-rooms"></div>
- </div>
- <div class="discover-rooms__minimal">
- <div class="discover-rooms-minimal__info-container">
- <h3 class="discover-rooms-minimal__h3">Minimal Duplex Room</h3>
- <p class="discover-rooms-minimal__paraph">Lorem ipsum dolor sit amet, consectetur adipisicing
- elit,
- sed do eiusmod tempor incididunt ut
- labore et dolore.</p>
- </div>
- <h2 class="discover-rooms-minimal__h2">$345<span class="discover-rooms-minimal-h2__span">/Night</span></h2>
  </div>
  </div>
 </section>
@@ -448,6 +439,4 @@
  </div>
 </section>
 <?php $this->stopSection(); ?>
-
-
 <?php if (isset($_shouldextend[1])) { echo $this->runChild('layout'); } ?>

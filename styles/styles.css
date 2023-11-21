@@ -1347,6 +1347,7 @@ main section.discover div.discover-rooms div.discover-rooms__minimal h2.discover
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin: 0 auto;
   }
   main section.discover div.discover-rooms div.discover-rooms__minimal div.discover-rooms-minimal__info-container {
     display: flex;

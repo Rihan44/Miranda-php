@@ -91,31 +91,21 @@
         </div>
         <div class="swiper" id="swipper-rooms">
             <div class="swiper-wrapper">
-                <div class="swiper-slide slide-img1">
-                    <img class="swiper-slide__img" src="img/slider-rooms1.jpeg" alt="img1" />
-                </div>
-                <div class="swiper-slide slide-img2">
-                    <img class="swiper-slide__img" src="img/slider-rooms2.jpg" alt="img2" />
-                </div>
-                <div class="swiper-slide slide-img3">
-                    <img class="swiper-slide__img" src="img/slider-rooms3.jpg" alt="img3" />
-                </div>
+                @foreach ($rooms as $room)
                 <div class="swiper-slide slide-img4">
-                    <img class="swiper-slide__img" src="img/slider-rooms4.jpg" alt="img4" />
+                    <img class="swiper-slide__img" src="{{$room['URL']}}" alt="img{{$room['id']}}" />
+                    <div class="discover-rooms__minimal">
+                        <div class="discover-rooms-minimal__info-container">
+                            <h3 class="discover-rooms-minimal__h3">{{$room['room_type']}}</h3>
+                            <p class="discover-rooms-minimal__paraph">{{$room['description']}}</p>
+                        </div>
+                        <h2 class="discover-rooms-minimal__h2">${{$room['price']}}<span class="discover-rooms-minimal-h2__span">/Night</span></h2>
+                    </div>
                 </div>
+                @endforeach
             </div>
             <div class="swiper-button-prev" id="swiper-button-prev-rooms"></div>
             <div class="swiper-button-next" id="swiper-button-next-rooms"></div>
-        </div>
-        <div class="discover-rooms__minimal">
-            <div class="discover-rooms-minimal__info-container">
-                <h3 class="discover-rooms-minimal__h3">Minimal Duplex Room</h3>
-                <p class="discover-rooms-minimal__paraph">Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit,
-                    sed do eiusmod tempor incididunt ut
-                    labore et dolore.</p>
-            </div>
-            <h2 class="discover-rooms-minimal__h2">$345<span class="discover-rooms-minimal-h2__span">/Night</span></h2>
         </div>
     </div>
 </section>
@@ -448,4 +438,3 @@
     </div>
 </section>
 @endsection
-

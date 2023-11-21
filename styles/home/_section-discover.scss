@@ -291,6 +291,7 @@ main {
           display: flex;
           flex-direction: column;
           align-items: center;
+          margin: 0 auto;
           h3.discover-rooms-minimal__h3 {
             font-family: $fontSecundaria;
             font-weight: 400;
@@ -430,6 +431,7 @@ main {
             display: flex;
             flex-direction: row;
             align-items: center;
+            margin: 0 auto;
             div.discover-rooms-minimal__info-container {
               display: flex;
               flex-direction: column;
