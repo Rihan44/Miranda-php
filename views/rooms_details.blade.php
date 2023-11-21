@@ -19,16 +19,19 @@
 </section>
 
 <section class="room-details__type">
+    @foreach ($rooms as $room)
     <div class="room-details-type__info">
         <div class="room-details-type-info__container">
             <h2 class="room-details-type-info__h2">Double Bed</h2>
-            <h4 class="room-details-type-info__h4">Luxury Double Bed</h4>
+            <h4 class="room-details-type-info__h4">{{$room['room_type']}}</h4>
         </div>
         <h3 class="room-details-type-info__h3">
-            $345<span class="room-details-type-info-h3__span">/Night</span>
+            ${{$room['price']}}<span class="room-details-type-info-h3__span">/Night</span>
         </h3>
     </div>
-    <img class="room-details-type__img" src="../img/slider-rooms3.jpg" alt="room" />
+    <img class="room-details-type__img" src="{{$room['URL']}}" alt="room" />
+    @endforeach
+
     <div class="room-details-type__availability">
         <h4 class="room-details-type-availability__h4">Check Availability</h4>
         <form class="room-details-type-availability__form" id="room-details-type-availability__form">
@@ -57,28 +60,10 @@
                 back to you very soon</p>
             <h4 class="modal-rooms-details__h4">The Miranda Hotel</h4>
         </div>
-        <!--  <div class="modal-rooms-details">
-                    <button class="modal-rooms-details__button-close" id="modal-rooms-details__button-close">
-                        <img class="modal-rooms-details__img" src="../img/close_icon.png" alt="close"/>
-                    </button>
-                    <h3 class="modal-rooms-details__h3">¡We are sorry</h3>
-                    <p class="modal-rooms-details__paraph">This room is not available for the
-                        dates you need. Please try different
-                        dates or try a different room.</p>
-                    <h4 class="modal-rooms-details__h4">The Miranda Hotel</h4>
-                </div> -->
     </div>
-    <p class="room-details-type__paraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut
-        perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-        aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-        explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-        consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
-        dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
-        incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+    @foreach ($rooms as $room)
+    <p class="room-details-type__paraph">{{$room['description']}}</p>
+    @endforeach
 </section>
 
 <section class="room-details__amenities">
@@ -182,6 +167,7 @@
 
         <div class="swiper" id="swiper-rooms-details">
             <div class="swiper-wrapper swiper-wrapper__rooms-details">
+                @foreach ($two_rooms as $room)
                 <div class="swiper-slide slide-img1">
                     <div class="discover-rooms__icons">
                         <img class="discover-rooms-icons__img" src="../img/bed-icon.png" alt="bed-icon" />
@@ -192,38 +178,19 @@
                         <img class="discover-rooms-icons__img" src="../img/no-smoking-icon.png" alt="no-smoking-icon" />
                         <img class="discover-rooms-icons__img" src="../img/cocktail-icon.png" alt="cocktail-icon" />
                     </div>
-                    <img class="swiper-slide__img" src="../img/slider-rooms1.jpeg" alt="img1" />
+                    <img class="swiper-slide__img" src="{{$room['URL']}}" alt="img1" />
                     <div class="box-container">
-                        <h3 class="rooms-list-room__h3">Minimal Duplex Room</h3>
-                        <p class="rooms-list-room__paraph">Lorem ipsum dolor sit amet, consectetur adipi sicing
-                            elit, sed do eiusmod tempor.</p>
+                        <h3 class="rooms-list-room__h3">{{$room['room_type']}}</h3>
+                        <p class="rooms-list-room__paraph">{{$room['description']}}</p>
                         <div class="rooms-list-room__price-info">
-                            <h2 class="rooms-list-room-price-info__h2">$345/Night</h2>
-                            <button class="rooms-list-room-price-info__button">Booking now</button>
+                            <h2 class="rooms-list-room-price-info__h2">${{$room['price']}}/Night</h2>
+                            <button class="rooms-list-room-price-info__button"> 
+                                <a href="rooms_details.php?id={{$room['id']}}">Booking now</a>
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide slide-img2">
-                    <div class="discover-rooms__icons">
-                        <img class="discover-rooms-icons__img" src="../img/bed-icon.png" alt="bed-icon" />
-                        <img class="discover-rooms-icons__img" src="../img/wifi-icon.png" alt="wifi-icon" />
-                        <img class="discover-rooms-icons__img" src="../img/car-icon.png" alt="car-icon" />
-                        <img class="discover-rooms-icons__img" src="../img/cold-icon.png" alt="snow-icon" />
-                        <img class="discover-rooms-icons__img" src="../img/gym-icon.png" alt="gym-icon" />
-                        <img class="discover-rooms-icons__img" src="../img/no-smoking-icon.png" alt="no-smoking-icon" />
-                        <img class="discover-rooms-icons__img" src="../img/cocktail-icon.png" alt="cocktail-icon" />
-                    </div>
-                    <img class="swiper-slide__img" src="../img/slider-rooms2.jpg" alt="img1" />
-                    <div class="box-container">
-                        <h3 class="rooms-list-room__h3">Minimal Duplex Room</h3>
-                        <p class="rooms-list-room__paraph">Lorem ipsum dolor sit amet, consectetur adipi sicing
-                            elit, sed do eiusmod tempor.</p>
-                        <div class="rooms-list-room__price-info">
-                            <h2 class="rooms-list-room-price-info__h2">$345/Night</h2>
-                            <button class="rooms-list-room-price-info__button">Booking now</button>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
             <div class="swiper-button-prev" id="swiper-button-prev-rooms-details"></div>
             <div class="swiper-button-next" id="swiper-button-next-rooms-details"></div>

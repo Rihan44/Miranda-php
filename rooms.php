@@ -9,5 +9,5 @@ $result = $conn->query($sql);
 $rooms = $result->fetch_all(MYSQLI_ASSOC);
 
 echo $blade->run('rooms', ['rooms' => $rooms]);
-var_dump($rooms);
+$conn->close();
 ?>

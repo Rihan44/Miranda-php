@@ -31,7 +31,6 @@
                  <ul class="header-menu-desktop-menu__items">
                      <li><a href="/about_us.php">About Us</a></li>
                      <li><a href="/rooms.php">Rooms</a></li>
-                     <li><a href="/rooms_details.php">Rooms Details</a></li>
                      <li><a href="/offers.php">Offers</a></li>
                      <li><a href="/contact.php">Contact</a></li>
                  </ul>
@@ -41,7 +40,6 @@
              <ul class="header-menu__items">
                  <li><a href="/about_us.php">About Us</a></li>
                  <li><a href="/rooms.php">Rooms</a></li>
-                 <li><a href="/rooms_details.php">Rooms Details</a></li>
                  <li><a href="/offers.php">Offers</a></li>
                  <li><a href="/contact.php">Contact</a></li>
              </ul>
