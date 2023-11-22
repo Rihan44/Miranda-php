@@ -4,6 +4,15 @@ main {
   section.rooms__list {
     width: 100%;
     margin-bottom: 30px;
+    h3.rooms__list-no-rooms {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 2.2em;
+      font-family: 'Old Standard TT', sans-serif;
+      color: rgb(34, 34, 34);
+      font-weight: bold;
+      margin-bottom: 60px;
+    }
     div.rooms-list-grid__container {
       display: flex;
       flex-direction: column;

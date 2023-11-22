@@ -91,6 +91,22 @@ if(home !== null) {
                     color: "#fff"
                 }
                 }).showToast();
+        } else if(check_in.value === '' || check_out.value === '') {
+            e.preventDefault();
+
+            Toastify({
+                text: "Please select a valid date",
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top", 
+                position: "center", 
+                stopOnFocus: true, 
+                style: {
+                    background: "red",
+                    color: "#fff"
+                }
+                }).showToast();
         }
     });
     
