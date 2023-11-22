@@ -3113,7 +3113,7 @@ main section.room-details__type div.room-details-type__availability form.room-de
   font-family: "Roboto", sans-serif;
 }
 main section.room-details__type div.room-details-type__availability form.room-details-type-availability__form button.room-details-type-availability-form__button {
-  width: 100%;
+  width: 60%;
   padding: 20px;
   margin-top: 30px;
   margin-bottom: 20px;
@@ -3126,6 +3126,13 @@ main section.room-details__type div.room-details-type__availability form.room-de
   font-family: "Archivo", sans-serif;
   font-weight: 700;
   background: rgb(190, 173, 142);
+  transition: 0.3s;
+  border: 2px solid rgb(190, 173, 142);
+  align-self: flex-end;
+}
+main section.room-details__type div.room-details-type__availability form.room-details-type-availability__form button.room-details-type-availability-form__button:hover {
+  background-color: rgba(51, 51, 51, 1);
+  border: 2px solid gray;
 }
 main section.room-details__type p.room-details-type__paraph {
   font-family: "Roboto", sans-serif;

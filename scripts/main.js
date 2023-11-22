@@ -4,6 +4,8 @@ let img_icon = document.getElementById('img_icon');
 let nav_menu = document.getElementById('nav_menu');
 let check_menu = true;
 let dw = document.querySelector('#form_check_availability');
+let title = document.title;
+
 /* HEADER MOVIL */
 
 burguer_icon.addEventListener('click', () => {
@@ -64,9 +66,7 @@ if (scree_width > 1000) {
 
 /* ---------HOME---------- */
 
-let home = document.querySelector('.discover');
-
-if(home !== null) {
+if(title === 'Home') {
     let swiper__facilities = document.querySelector('.swiper__facilities');
     let swiper__wrapper = document.querySelector('.swiper-wrapper__facilities');
     let form_home = document.querySelector('#form_check_availability');
@@ -199,9 +199,7 @@ if(home !== null) {
 
 /* -------ABOUT US------- */
 
-let about_us = document.querySelector('.restaurant');
-
-if(about_us !== null){
+if(title === 'About Us'){
     let swiper__facilities_about = document.querySelector('.swiper-facilities-about-us');
     let swiper__wrapper_about = document.querySelector('.swiper-wrapper-about-us');
     
@@ -265,9 +263,7 @@ if(about_us !== null){
 
 /* ----ROOMS DETAILS ---- */
 
-let room_details = document.querySelector('.room-details__type');
-
-if(room_details !== null) {
+if(title === 'Room Detail') {
     let swiper_rooms_details = document.querySelector('#swiper-rooms-details');
     let swiper_wrapper__rooms_details = document.querySelector('.swiper-wrapper__rooms-details');
     function initSwiperRoomsDetails() {
@@ -298,33 +294,120 @@ if(room_details !== null) {
         initSwiperRoomsDetails();
     });
     
-    /* CHECK ROOMS */
+    /* BOOK ROOMS */
     
-    try {
-        let buttonCheck = document.getElementById('room-details-type-availability-form__button');
-        let formCheck = document.getElementById('room-details-type-availability__form');
-        let modalCheck = document.querySelector('.modal-rooms-details');
-        let buttonCloseModal = document.getElementById('modal-rooms-details__button-close');
-    
-        formCheck.addEventListener('submit', (e) => e.preventDefault());
-    
-        buttonCheck.addEventListener('click', () => {
-            modalCheck.style.display = 'flex';
-        });
-    
-        buttonCloseModal.addEventListener('click', () => {
-            modalCheck.style.display = 'none';
-        });
-    } catch (error) {
-        console.error(error)
-    }
+    let form_book_now = document.getElementById('room-details-type-availability__form');
+    let check_in = document.querySelector('#room-details-type-availability-form__check-in');
+    let check_out = document.querySelector('#room-details-type-availability-form__check-out');
+    let full_name = document.querySelector('#room-details-type-availability-form__name');
+    let email = document.querySelector('#room-details-type-availability-form__email');
+    let phone = document.querySelector('#room-details-type-availability-form__phone');
+    let message = document.querySelector('#room-details-type-availability-form__message');
+
+    form_book_now.addEventListener('submit', (e) => {
+
+        if(check_out.value < check_in.value) {
+            e.preventDefault();
+
+            Toastify({
+                text: "Please select a valid date, check out must be after check in",
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top", 
+                position: "center", 
+                stopOnFocus: true, 
+                style: {
+                    background: "red",
+                    color: "#fff"
+                }
+                }).showToast();
+                
+        } else if(check_in.value === '' || check_out.value === '') {
+            e.preventDefault();
+
+            Toastify({
+                text: "Please select a valid date",
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top", 
+                position: "center", 
+                stopOnFocus: true, 
+                style: {
+                    background: "red",
+                    color: "#fff"
+                }
+                }).showToast();
+
+        } else if(full_name.value.trim() === ''){
+            e.preventDefault();
+            Toastify({
+                text: "Full name cant be empty!",
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top", 
+                position: "center", 
+                stopOnFocus: true, 
+                style: {
+                    background: "red",
+                    color: "#fff"
+                }
+                }).showToast();
+        }else if(email.value == '') {
+            e.preventDefault();
+            Toastify({
+                text: "Email cant be empty!",
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top", 
+                position: "center", 
+                stopOnFocus: true, 
+                style: {
+                    background: "red",
+                    color: "#fff"
+                }
+                }).showToast();
+        } else if(phone.value === '' || isNaN(parseInt(phone.value))
+        || parseInt(phone.value.length) != 9) {
+            e.preventDefault();
+            Toastify({
+                text: "Phone have to be a real phone number and cant be empty!",
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top", 
+                position: "center", 
+                stopOnFocus: true, 
+                style: {
+                    background: "red",
+                    color: "#fff"
+                }
+                }).showToast();
+        }  else if(message.value == '') {
+            e.preventDefault();
+            Toastify({
+                text: "Message cant be empty!",
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top", 
+                position: "center", 
+                stopOnFocus: true, 
+                style: {
+                    background: "red",
+                    color: "#fff"
+                }
+                }).showToast();
+        }  
+    });
 }
 
 /* ----OFFERS---- */
 
-let offers = document.querySelector('.luxury-rooms-offers');
-
-if(offers !== null) {
+if(title === 'Offers') {
     let swipper_rooms_offers = document.querySelector('#swipper-rooms-offers');
     let swiper_wrapper_rooms_offers = document.querySelector('.swiper-wrapper__rooms-offers');
     function initSwiperRoomsOffers() {
@@ -359,9 +442,7 @@ if(offers !== null) {
 
 /* ----CONTACT---- */
 
-let contact = document.querySelector('.contact-info');
-
-if(contact) {
+if(title === 'Contact') {
     let form_contact = document.querySelector('#form_contact');
     let full_name = document.querySelector('#full-name');
     let number_input = document.querySelector('#number-input');

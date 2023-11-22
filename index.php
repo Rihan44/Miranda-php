@@ -10,7 +10,9 @@
         header("Location: rooms.php?check_in=".$_GET['check_in']."&check_out=".$_GET['check_out']);
     }
 
-    echo $blade->run('home', ['rooms' => $rooms]);
+    $today_date = date("Y-m-d");
+
+    echo $blade->run('home', ['rooms' => $rooms, 'today_date' => $today_date]);
 
     $conn->close();
 ?>

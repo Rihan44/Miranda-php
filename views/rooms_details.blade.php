@@ -40,9 +40,9 @@
 
     <div class="room-details-type__availability">
         <h4 class="room-details-type-availability__h4">Check Availability</h4>
-        <form class="room-details-type-availability__form" id="room-details-type-availability__form">
+        <form class="room-details-type-availability__form" id="room-details-type-availability__form" method="POST">
             <label for="check-in">Check In</label>
-            <input type="date" name="check-in" id="room-details-type-availability-form__check-in" />
+            <input type="date" name="check-in" id="room-details-type-availability-form__check-in" min="{{$today_date}}"/>
             <label for="check-out">Check Out</label>
             <input type="date" name="check-out" id="room-details-type-availability-form__check-out" />
             <label for="name">Full Name</label>
@@ -53,18 +53,13 @@
             <input type="text" name="phone" id="room-details-type-availability-form__phone" placeholder="Number Phone" />
             <label for="message">Message</label>
             <input type="text" name="message" id="room-details-type-availability-form__message" placeholder="Your Message" />
-            <button id="room-details-type-availability-form__button" class="room-details-type-availability-form__button" type="submit">BOOK NOW</button>
-        </form>
-        <div class="room-details-type__modal-form-disponible modal-rooms-details">
-            <button class="modal-rooms-details__button-close" id="modal-rooms-details__button-close">
-                <img class="modal-rooms-details__img" src="../img/close_icon.png" alt="close" />
+            <button 
+                id="room-details-type-availability-form__button" 
+                class="room-details-type-availability-form__button" 
+                type="submit">
+                BOOK NOW
             </button>
-            <h3 class="modal-rooms-details__h3">¡Thank you for your request!</h3>
-            <p class="modal-rooms-details__paraph">We have received it correctly.
-                Someone from our Team will get
-                back to you very soon</p>
-            <h4 class="modal-rooms-details__h4">The Miranda Hotel</h4>
-        </div>
+        </form>
     </div>
     @foreach ($rooms as $room)
     <p class="room-details-type__paraph">{{$room['description']}}</p>

@@ -2,7 +2,6 @@
 require_once('setup.php');
 require_once('config.php');
 
-
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
     if(isset($_POST['name']) && isset($_POST['number'])
     && isset($_POST['email']) && isset($_POST['subject'])
