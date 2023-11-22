@@ -69,6 +69,30 @@ let home = document.querySelector('.discover');
 if(home !== null) {
     let swiper__facilities = document.querySelector('.swiper__facilities');
     let swiper__wrapper = document.querySelector('.swiper-wrapper__facilities');
+    let form_home = document.querySelector('#form_check_availability');
+    let check_in = document.querySelector('#check_in_rooms');
+    let check_out = document.querySelector('#check_out_rooms');
+
+    form_home.addEventListener('submit', (e) => {
+
+        if(check_out.value < check_in.value) {
+            e.preventDefault();
+
+            Toastify({
+                text: "Please select a valid date, check out must be after check in",
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top", 
+                position: "center", 
+                stopOnFocus: true, 
+                style: {
+                    background: "red",
+                    color: "#fff"
+                }
+                }).showToast();
+        }
+    });
     
     function initSwiperRooms() {
         if (window.matchMedia("(max-width: 1000px").matches) {
@@ -153,24 +177,6 @@ if(home !== null) {
     window.addEventListener('resize', () => {
         initSwiperRooms();
         initSwiperFacilities();
-    })
-    
-    /* BUTTONS */
-    let btn_tour = document.querySelector('#btn_tour');
-    let btn_learn_more = document.querySelector('#btn_learn_more');
-    let form_check_availability = document.querySelector('#form_check_availability');
-    
-    btn_tour.addEventListener('click', () => {
-        window.location.href = '../rooms.php';
-    })
-    
-    btn_learn_more.addEventListener('click', () => {
-        window.location.href = '../contact.php';
-    })
-    
-    form_check_availability.addEventListener('submit', (e) => {
-        e.preventDefault();
-        window.location.href = '../rooms.php';
     })
     
 }

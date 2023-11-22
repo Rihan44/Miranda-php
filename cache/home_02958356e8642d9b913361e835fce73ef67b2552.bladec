@@ -18,14 +18,14 @@
 </section>
 
 <section class="banner__checkdate">
- <form class="banner-checkdate__form" id="form_check_availability">
+ <form class="banner-checkdate__form" id="form_check_availability" method="GET">
  <div class="banner-checkdate-form__input-container">
  <label for="arrive">Arrival date</label>
- <input type="date" name="" id="" />
+ <input type="date" name="check_in" id="check_in_rooms"/>
  </div>
  <div class="banner-checkdate-form__input-container">
  <label>Departure Date</label>
- <input type="date" name="" />
+ <input type="date" name="check_out" id="check_out_rooms"/>
  </div>
  <button class="banner-checkdate-form__button" type="submit">
  CHECK AVAILABILITY
