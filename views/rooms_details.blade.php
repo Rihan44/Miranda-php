@@ -6,12 +6,12 @@
     <h2 class="rooms__firsttitle" id="rooms__firsttitle">THE ULTIMATE LUXURY </h2>
     <h3 class="rooms__secondtitle" id="rooms__secondtitle">The Ultimate Room</h3>
     <div class="rooms__buttons" id="rooms__buttons">
-        <a class="banner-buttons__home" href="../index.html
+        <a class="banner-buttons__home" href="../index.php
                 ">
             Home
         </a>
         <p>|</p>
-        <a class="banner-buttons__about" href="../index.html
+        <a class="banner-buttons__about" href="../index.php
                 ">
             Rooms Details
         </a>
@@ -25,9 +25,15 @@
             <h2 class="room-details-type-info__h2">Double Bed</h2>
             <h4 class="room-details-type-info__h4">{{$room['room_type']}}</h4>
         </div>
-        <h3 class="room-details-type-info__h3">
-            ${{$room['price']}}<span class="room-details-type-info-h3__span">/Night</span>
-        </h3>
+        @if($room['offer_price'])
+            <h3 class="room-details-type-info__h3" style="color: red;">
+                ${{$room['price'] * $room['discount'] / 100}}<span class="room-details-type-info-h3__span">/Night</span>
+            </h3>
+        @else 
+            <h3 class="room-details-type-info__h3">
+                ${{$room['price']}}<span class="room-details-type-info-h3__span">/Night</span>
+            </h3>
+        @endif
     </div>
     <img class="room-details-type__img" src="{{$room['URL']}}" alt="room" />
     @endforeach
@@ -47,8 +53,7 @@
             <input type="text" name="phone" id="room-details-type-availability-form__phone" placeholder="Number Phone" />
             <label for="message">Message</label>
             <input type="text" name="message" id="room-details-type-availability-form__message" placeholder="Your Message" />
-            <button id="room-details-type-availability-form__button" class="room-details-type-availability-form__button" type="submit">CHECK
-                AVAILABILITY</button>
+            <button id="room-details-type-availability-form__button" class="room-details-type-availability-form__button" type="submit">BOOK NOW</button>
         </form>
         <div class="room-details-type__modal-form-disponible modal-rooms-details">
             <button class="modal-rooms-details__button-close" id="modal-rooms-details__button-close">

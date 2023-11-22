@@ -161,16 +161,16 @@ if(home !== null) {
     let form_check_availability = document.querySelector('#form_check_availability');
     
     btn_tour.addEventListener('click', () => {
-        window.location.href = '../pages/rooms.html';
+        window.location.href = '../rooms.php';
     })
     
     btn_learn_more.addEventListener('click', () => {
-        window.location.href = '../pages/contact.html';
+        window.location.href = '../contact.php';
     })
     
     form_check_availability.addEventListener('submit', (e) => {
         e.preventDefault();
-        window.location.href = '../pages/rooms.html';
+        window.location.href = '../rooms.php';
     })
     
 }
