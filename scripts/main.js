@@ -341,18 +341,93 @@ let contact = document.querySelector('.contact-info');
 
 if(contact) {
     let form_contact = document.querySelector('#form_contact');
+    let full_name = document.querySelector('#full-name');
+    let number_input = document.querySelector('#number-input');
+    let email_input = document.querySelector('#email-input');
+    let subject_input = document.querySelector('#subject-input');
+    let message = document.querySelector('#message');
 
-form_contact.addEventListener('submit', (e) => {
-    let paragraph__enviado = document.querySelector('#paragraph__enviado');
-    e.preventDefault();
+    form_contact.addEventListener('submit', (e) => {
 
-    paragraph__enviado.style.opacity = '1';
-    paragraph__enviado.style.color = 'rgba(119, 119, 119, 1)';
-
-    setTimeout(() => {
-        location.reload();
-    }, 400);
-});
+        if(full_name.value.trim() === ''){
+            e.preventDefault();
+            Toastify({
+                text: "Full name cant be empty!",
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top", 
+                position: "center", 
+                stopOnFocus: true, 
+                style: {
+                    background: "red",
+                    color: "#fff"
+                }
+                }).showToast();
+        } else if(number_input.value === '' || isNaN(parseInt(number_input.value))
+        || parseInt(number_input.value.length) != 9) {
+            e.preventDefault();
+            Toastify({
+                text: "Phone have to be a real phone number and cant be empty!",
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top", 
+                position: "center", 
+                stopOnFocus: true, 
+                style: {
+                    background: "red",
+                    color: "#fff"
+                }
+                }).showToast();
+        } else if(email_input.value == '') {
+            e.preventDefault();
+            Toastify({
+                text: "Email cant be empty!",
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top", 
+                position: "center", 
+                stopOnFocus: true, 
+                style: {
+                    background: "red",
+                    color: "#fff"
+                }
+                }).showToast();
+        } else if(subject_input.value == '') {
+            e.preventDefault();
+            Toastify({
+                text: "Email subject cant be empty!",
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top", 
+                position: "center", 
+                stopOnFocus: true, 
+                style: {
+                    background: "red",
+                    color: "#fff"
+                }
+                }).showToast();
+        } else if(message.value == '') {
+            e.preventDefault();
+            Toastify({
+                text: "Message cant be empty!",
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top", 
+                position: "center", 
+                stopOnFocus: true, 
+                style: {
+                    background: "red",
+                    color: "#fff"
+                }
+                }).showToast();
+        }
+    
+    });
 
 }
 
