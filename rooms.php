@@ -46,6 +46,9 @@ if(isset($_GET['check_in']) && isset($_GET['check_out'])) {
     $no_rooms = false;
 }
 
-echo $blade->run('rooms', ['rooms' => $rooms, 'no_rooms' => $no_rooms]);
+$today_date = date("Y-m-d");
+
+echo $blade->run('rooms', ['rooms' => $rooms, 'no_rooms' => $no_rooms, 'today_date' => $today_date]);
+
 $conn->close();
 ?>

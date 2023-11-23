@@ -21,7 +21,7 @@
     <form class="banner-checkdate__form" id="form_check_availability" method="GET">
         <div class="banner-checkdate-form__input-container">
             <label for="arrive">Arrival date</label>
-            <input type="date" name="check_in" id="check_in_rooms" min="{{$today_date}}"/>
+            <input type="date" name="check_in" id="check_in_rooms" value="{{$today_date}}" min="{{$today_date}}"/>
         </div>
         <div class="banner-checkdate-form__input-container">
             <label>Departure Date</label>
@@ -42,7 +42,7 @@
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                 nostrud
                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <button class="discover-titlebox__button">Book now</button>
+            <button class="discover-titlebox__button" id="discover-titlebox__button">Book now</button>
         </div>
 
         <div class="discover-container__strong-luxury">

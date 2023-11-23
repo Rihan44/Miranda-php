@@ -6,6 +6,9 @@ main {
       max-width: 700px;
       margin: auto;
       margin-bottom: 40px;
+      div.swiper-wrapper__facilities {
+        height: 320px;
+      }
       h2.facilities__h2 {
         background: none;
         font-size: 0.875em;
@@ -112,6 +115,7 @@ main {
           padding-bottom: 0px;
           flex-wrap: wrap;
           justify-content: space-around;
+          height: auto;
           h3 {
             font-family: $color-secundario;
             font-weight: 400;

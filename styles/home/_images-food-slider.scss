@@ -5,6 +5,9 @@ main {
     width: 100%;
     padding: 10px;
     margin-bottom: 50px;
+    div.swiper-wrapper {
+      height: 350px;
+    }
     div.swiper-images-food__container {
       width: 100%;
       height: 335px;

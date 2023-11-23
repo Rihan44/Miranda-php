@@ -25,7 +25,7 @@
             <form class="banner-checkdate__form" id="form_check_availability" method="GET">
                 <div class="banner-checkdate-form__input-container">
                     <label for="arrive">Arrival date</label>
-                    <input type="date" name="check_in" id="check_in_rooms"/>
+                    <input type="date" name="check_in" id="check_in_rooms" min="{{$today_date}}"/>
                 </div>
                 <div class="banner-checkdate-form__input-container">
                     <label>Departure Date</label>

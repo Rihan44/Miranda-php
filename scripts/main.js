@@ -72,6 +72,21 @@ if(title === 'Home') {
     let form_home = document.querySelector('#form_check_availability');
     let check_in = document.querySelector('#check_in_rooms');
     let check_out = document.querySelector('#check_out_rooms');
+    let book_now = document.querySelector('#discover-titlebox__button');
+    let btn_tour = document.querySelector('#btn_tour');
+    let btn_learn_more = document.querySelector('#btn_learn_more');
+
+    btn_tour.addEventListener('click', () => {
+        location.href = '/rooms.php';
+    });
+
+    btn_learn_more.addEventListener('click', () => {
+        location.href = '/contact.php';
+    });
+
+    book_now.addEventListener('click', () => {
+        location.href = '/rooms.php';
+    });
 
     form_home.addEventListener('submit', (e) => {
 

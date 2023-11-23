@@ -20,7 +20,6 @@
 
 @foreach ($rooms as $room)
     <section class="luxury-rooms-offers">
-
         <div class="luxury-rooms-offers-container__info-price">
             <img class="luxury-rooms-offers-container-info-price__img" src="../img/slider-rooms1.jpeg" alt="luxury-room" />
             <div class="luxury-rooms-offers-container-info-prices__container">
@@ -31,11 +30,11 @@
             </div>
         </div>
         <div class="luxury-rooms-offers__container">
-            <div class="container-info">
-                <h3 class="luxury-rooms-offers-container__h3">Double Bed</h3>
-                <h2 class="luxury-rooms-offers-container__h2">{{$room['room_type']}}</h2>
-                <p class="luxury-rooms-offers-container__paraph">{{$room['description']}}</p>
-            </div>
+        <div class="container-info">
+            <h3 class="luxury-rooms-offers-container__h3">Double Bed</h3>
+            <h2 class="luxury-rooms-offers-container__h2">{{$room['room_type']}}</h2>
+            <p class="luxury-rooms-offers-container__paraph">{{$room['description']}}</p>
+        </div>
 
             <div class="luxury-rooms-offers-container__amenities">
                 <div class="container-icons">
@@ -109,7 +108,7 @@
             <div class="swiper-wrapper swiper-wrapper__rooms-offers">
                 @foreach ($two_rooms as $room)
                     <div class="swiper-slide slide-img1">
-                        <div class="discover-rooms__icons">
+                        <div class="discover-rooms__icons" style="top: 52%;">
                             <img class="discover-rooms-icons__img" src="../img/bed-icon.png" alt="bed-icon" />
                             <img class="discover-rooms-icons__img" src="../img/wifi-icon.png" alt="wifi-icon" />
                             <img class="discover-rooms-icons__img" src="../img/car-icon.png" alt="car-icon" />
@@ -124,7 +123,7 @@
                             <p class="rooms-list-room__paraph">{{$room['description']}}.</p>
                             <div class="rooms-list-room__price-info">
                                 <h2 class="rooms-list-room-price-info__h2">${{$room['price']}}/Night</h2>
-                                <button class="rooms-list-room-price-info__button"> 
+                                <button class="rooms-list-room-price-info__button" style="border: none;"> 
                                     <a href="rooms_details.php?id={{$room['id']}}">Booking now</a>
                             </button>
                             </div>

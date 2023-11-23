@@ -51,6 +51,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 $today_date = date("Y-m-d");
 
 echo $blade->run('rooms_details', ['rooms' => $room, 'two_rooms' => $two_rooms, 'today_date' => $today_date]);
+
 $conn->close();
 ?>
 

@@ -674,6 +674,9 @@ main div.swiper-images-food-slider {
   padding: 10px;
   margin-bottom: 50px;
 }
+main div.swiper-images-food-slider div.swiper-wrapper {
+  height: 350px;
+}
 main div.swiper-images-food-slider div.swiper-images-food__container {
   width: 100%;
   height: 335px;
@@ -990,6 +993,12 @@ main section.discover div.discover__titlebox button.discover-titlebox__button {
   font-family: "Archivo", sans-serif;
   font-weight: 700;
   margin-bottom: 40px;
+  transition: 0.5s;
+  border: 2px solid rgba(190, 173, 142, 1);
+}
+main section.discover div.discover__titlebox button.discover-titlebox__button:hover {
+  background-color: rgba(51, 51, 51, 1);
+  border: 2px solid gray;
 }
 main section.discover div.discover-strong-team {
   display: flex;
@@ -1121,7 +1130,7 @@ main section.discover div.discover-rooms {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin: auto;
+  margin: 0 auto;
   max-width: 650px;
 }
 main section.discover div.discover-rooms h2.discover-rooms__h2 {
@@ -1175,6 +1184,7 @@ main section.discover div.discover-rooms div#swipper-rooms div#swiper-button-pre
   height: 32px;
   font-size: 10px;
   color: rgb(34, 34, 34);
+  top: 27%;
 }
 main section.discover div.discover-rooms div#swipper-rooms div#swiper-button-prev-rooms::after,
 main section.discover div.discover-rooms div#swipper-rooms .swiper-rtl #swiper-button-prev-rooms::after {
@@ -1191,6 +1201,7 @@ main section.discover div.discover-rooms div#swipper-rooms div#swiper-button-nex
   height: 32px;
   font-size: 10px;
   color: rgb(34, 34, 34);
+  top: 27%;
 }
 main section.discover div.discover-rooms div#swipper-rooms div#swiper-button-next-rooms::after,
 main section.discover div.discover-rooms div#swipper-rooms .swiper-rtl #swiper-button-next-rooms::after {
@@ -1211,6 +1222,8 @@ main section.discover div.discover-rooms div.discover-rooms__minimal {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
+  text-align: center;
 }
 main section.discover div.discover-rooms div.discover-rooms__minimal h3.discover-rooms-minimal__h3 {
   font-family: "Old Standard TT", sans-serif;
@@ -1516,6 +1529,10 @@ main section.facilities {
   max-width: 700px;
   margin: auto;
   margin-bottom: 40px;
+  
+}
+main section.facilities div.swiper-wrapper__facilities {
+  height: 320px;
 }
 main section.facilities h2.facilities__h2 {
   background: none;
@@ -1622,6 +1639,7 @@ main section.facilities div.facilities-container__desktop {
     padding-bottom: 0px;
     flex-wrap: wrap;
     justify-content: space-around;
+    height: auto;
   }
   main section.facilities div.swiper-wrapper__facilities h3 {
     font-family: rgb(189, 172, 141);
@@ -1707,7 +1725,7 @@ main section.menu {
   max-width: 700px;
   margin: auto;
   margin-bottom: 50px;
-  margin-top: 60px;
+  margin-top: 30px;
   overflow: hidden;
 }
 main section.menu img.menu__img {
@@ -2415,6 +2433,9 @@ main section.facilities-about-us div#swiper-facilities-about-us {
   width: 90%;
   margin-bottom: 40px;
   max-width: 700px;
+}
+main section.facilities-about-us div#swiper-facilities-about-us div.swiper-wrapper-about-us {
+  height: 350px;
 }
 main section.facilities-about-us div#swiper-facilities-about-us div.slider-facilities-about-us-articles {
   padding: 20px;
@@ -3743,7 +3764,7 @@ main section.luxury-rooms-offers div.luxury-rooms-offers-container__info-price d
   position: relative;
   background: none;
   top: -80px;
-  right: -65%;
+  right: -53%;
   display: flex;
   flex-direction: column;
 }
@@ -3841,6 +3862,7 @@ main section.luxury-rooms-offers div.luxury-rooms-offers-container__info-price d
     position: relative;
     background: none;
     top: -30%;
+    right: -65%;
     display: flex;
     flex-direction: column;
     z-index: 3;
