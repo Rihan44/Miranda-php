@@ -20,7 +20,7 @@
 
 <div class="contact-info">
  <div class="contact-info__container">
- <img class="contact-info-container__img" src="../img/location-icon.png" alt="location" />
+ <img class="contact-info-container__img" src="/img/location-icon.png" alt="location" />
  <div class="contact-info-container__data">
  <h4 class="contact-info-container-data__h4">Hotel Address</h4>
  <p class="contact-info-container-data__paraph">C. de la Princesa, 31, 2º</p>
@@ -28,7 +28,7 @@
  </div>
  </div>
  <div class="contact-info__container">
- <img class="contact-info-container__img" src="../img/phone-icon.png" alt="phone" />
+ <img class="contact-info-container__img" src="/img/phone-icon.png" alt="phone" />
  <div class="contact-info-container__data">
  <h4 class="contact-info-container-data__h4">
  Phone Number
@@ -42,7 +42,7 @@
  </div>
  </div>
  <div class="contact-info__container">
- <img class="contact-info-container__img" src="../img/email-icon.png" alt="email" />
+ <img class="contact-info-container__img" src="/img/email-icon.png" alt="email" />
  <div class="contact-info-container__data">
  <h4 class="contact-info-container-data__h4">Email</h4>
  <p class="contact-info-container-data__paraph">
@@ -61,29 +61,29 @@
  <form class="contact-form-container__formulario" id="form_contact" method="POST" action="contact.php">
  <div class="inputs-box">
  <div class="contact-form-container-formulario__input-container">
- <img class="contact-form-container-formulario-input-container__icon" src="../img/person-gold-icon.png" alt="person" />
+ <img class="contact-form-container-formulario-input-container__icon" src="/img/person-gold-icon.png" alt="person" />
  <input class="contact-form-container-formulario-input-container__input" type="text" name="name" id="full-name" placeholder="Your full name" />
  </div>
  <div class="contact-form-container-formulario__input-container">
- <img class="contact-form-container-formulario-input-container__icon" src="../img/gold-phone-icon.png" alt="phone" />
+ <img class="contact-form-container-formulario-input-container__icon" src="/img/gold-phone-icon.png" alt="phone" />
  <input class="contact-form-container-formulario-input-container__input" type="text" name="number" id="number-input" placeholder="Add phone number" />
  </div>
  </div>
 
  <div class="inputs-box">
  <div class="contact-form-container-formulario__input-container">
- <img class="contact-form-container-formulario-input-container__icon" src="../img/email-gold-icon.png" alt="email" />
+ <img class="contact-form-container-formulario-input-container__icon" src="/img/email-gold-icon.png" alt="email" />
  <input class="contact-form-container-formulario-input-container__input" type="email" name="email" id="email-input" placeholder="Enter email address" />
  </div>
  <div class="contact-form-container-formulario__input-container">
- <img class="contact-form-container-formulario-input-container__icon" src="../img/book-gold-icon.png" alt="book" />
+ <img class="contact-form-container-formulario-input-container__icon" src="/img/book-gold-icon.png" alt="book" />
  <input class="contact-form-container-formulario-input-container__input" type="text" name="subject" id="subject-input" placeholder="Enter subject" />
  </div>
  </div>
 
  <div class="inputs-box">
  <div class="contact-form-container-formulario__input-container">
- <img class="contact-form-container-formulario-input-container__icon" src="../img/pen-icon.png" alt="pen" />
+ <img class="contact-form-container-formulario-input-container__icon" src="/img/pen-icon.png" alt="pen" />
  <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter message" class="contact-form-container-formulario-input-container__textarea"></textarea>
  </div>
  </div>

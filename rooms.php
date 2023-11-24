@@ -1,7 +1,5 @@
 <?php
-require_once('setup.php');
 require_once('config.php');
-
 
 if(isset($_GET['check_in']) && isset($_GET['check_out'])) {
     $check_in = $_GET['check_in'];
@@ -46,9 +44,7 @@ if(isset($_GET['check_in']) && isset($_GET['check_out'])) {
     $no_rooms = false;
 }
 
-$today_date = date("Y-m-d");
-
-echo $blade->run('rooms', ['rooms' => $rooms, 'no_rooms' => $no_rooms, 'today_date' => $today_date]);
+echo $blade->run('rooms', ['rooms' => $rooms, 'no_rooms' => $no_rooms]);
 
 $conn->close();
 ?>

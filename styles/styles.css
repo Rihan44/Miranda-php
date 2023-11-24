@@ -286,7 +286,7 @@ footer {
   height: auto;
   width: 100%;
   margin-top: 60px;
-  background: url("../img/footer-mobile-bg.png");
+  background: url("/img/footer-mobile-bg.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   padding-top: 40px;
@@ -299,7 +299,7 @@ footer div.footer-container__socials div.footer__titlebox {
   display: flex;
   justify-content: flex-start;
   padding: 20px;
-  background: url("../img/footer-mobile-bg.png");
+  background: url("/img/footer-mobile-bg.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -346,7 +346,7 @@ footer div.footer-container__socials div.footer__socials {
   justify-content: flex-start;
   margin-left: 10px;
   padding: 20px;
-  background: url("../img/footer-mobile-bg.png");
+  background: url("/img/footer-mobile-bg.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -369,7 +369,7 @@ footer div.footer__services {
   width: 100%;
   height: auto;
   padding: 20px;
-  background: url("../img/footer-mobile-bg.png");
+  background: url("/img/footer-mobile-bg.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   max-width: 600px;
@@ -387,7 +387,7 @@ footer div.footer__services h3.footer-services__h3 {
 footer div.footer__services div.footer-services__list {
   display: flex;
   justify-content: space-around;
-  background: url("../img/footer-mobile-bg.png");
+  background: url("/img/footer-mobile-bg.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -412,7 +412,7 @@ footer div.footer__contact {
   flex-direction: column;
   width: 100%;
   padding: 20px;
-  background: url("../img/footer-mobile-bg.png");
+  background: url("/img/footer-mobile-bg.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   max-width: 600px;
@@ -492,14 +492,14 @@ footer div.footer__copyright p.footer-copyright__paraph {
     width: 100%;
     justify-content: space-between;
     margin-bottom: 30px;
-    background: url("../img/footer-mobile-bg.png");
+    background: url("/img/footer-mobile-bg.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
   footer div.footer-container div.footer-container__socials {
     width: 30%;
     margin-left: 40px;
-    background: url("../img/footer-mobile-bg.png");
+    background: url("/img/footer-mobile-bg.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
@@ -571,7 +571,7 @@ footer div.footer__copyright p.footer-copyright__paraph {
     width: 65%;
     display: flex;
     justify-content: space-around;
-    background: url("../img/footer-mobile-bg.png");
+    background: url("/img/footer-mobile-bg.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
@@ -1039,7 +1039,7 @@ main section.discover div.discover-strong-team div.discover-strong-team__box div
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url("../img/team-nocolor.png");
+  background: url("/img/team-nocolor.png");
   background-position: top right;
   background-repeat: no-repeat;
 }
@@ -1580,37 +1580,37 @@ main section.facilities div.slider-facilities-articles p {
   margin-bottom: 40px;
 }
 main section.facilities div.facilities-slide__article1 {
-  background: url("../img/01.png");
+  background: url("/img/01.png");
   background-position: top right;
   background-repeat: no-repeat;
   background-position-x: 90%;
 }
 main section.facilities div.facilities-slide__article2 {
-  background: url("../img/02.png");
+  background: url("/img/02.png");
   background-position: top right;
   background-repeat: no-repeat;
   background-position-x: 90%;
 }
 main section.facilities div.facilities-slide__article3 {
-  background: url("../img/03.png");
+  background: url("/img/03.png");
   background-position: top right;
   background-repeat: no-repeat;
   background-position-x: 90%;
 }
 main section.facilities div.facilities-slide__article4 {
-  background: url("../img/04.png");
+  background: url("/img/04.png");
   background-position: top right;
   background-repeat: no-repeat;
   background-position-x: 90%;
 }
 main section.facilities div.facilities-slide__article5 {
-  background: url("../img/05.png");
+  background: url("/img/05.png");
   background-position: top right;
   background-repeat: no-repeat;
   background-position-x: 90%;
 }
 main section.facilities div.facilities-slide__article6 {
-  background: url("../img/06.png");
+  background: url("/img/06.png");
   background-position: top right;
   background-repeat: no-repeat;
   background-position-x: 90%;
@@ -1669,7 +1669,7 @@ main section.facilities div.facilities-container__desktop {
   }
   main section.facilities div.swiper-wrapper__facilities div.facilities-slide__article1 {
     width: 30%;
-    background: url("../img/01.png");
+    background: url("/img/01.png");
     background-position: top right;
     background-repeat: no-repeat;
     background-position-x: 90%;
@@ -1677,7 +1677,7 @@ main section.facilities div.facilities-container__desktop {
   }
   main section.facilities div.swiper-wrapper__facilities div.facilities-slide__article2 {
     width: 30%;
-    background: url("../img/02.png");
+    background: url("/img/02.png");
     background-position: top right;
     background-repeat: no-repeat;
     background-position-x: 90%;
@@ -1685,7 +1685,7 @@ main section.facilities div.facilities-container__desktop {
   }
   main section.facilities div.swiper-wrapper__facilities div.facilities-slide__article3 {
     width: 30%;
-    background: url("../img/03.png");
+    background: url("/img/03.png");
     background-position: top right;
     background-repeat: no-repeat;
     background-position-x: 90%;
@@ -1693,7 +1693,7 @@ main section.facilities div.facilities-container__desktop {
   }
   main section.facilities div.swiper-wrapper__facilities div.facilities-slide__article4 {
     width: 30%;
-    background: url("../img/04.png");
+    background: url("/img/04.png");
     background-position: top right;
     background-repeat: no-repeat;
     background-position-x: 90%;
@@ -1701,7 +1701,7 @@ main section.facilities div.facilities-container__desktop {
   }
   main section.facilities div.swiper-wrapper__facilities div.facilities-slide__article5 {
     width: 30%;
-    background: url("../img/05.png");
+    background: url("/img/05.png");
     background-position: top right;
     background-repeat: no-repeat;
     background-position-x: 90%;
@@ -1709,7 +1709,7 @@ main section.facilities div.facilities-container__desktop {
   }
   main section.facilities div.swiper-wrapper__facilities div.facilities-slide__article6 {
     width: 30%;
-    background: url("../img/06.png");
+    background: url("/img/06.png");
     background-position: top right;
     background-repeat: no-repeat;
     background-position-x: 90%;
@@ -1808,7 +1808,7 @@ main section.menu div#swiper-menu div.slide-menu div.slide-menu__food div.slider
   width: 100%;
   height: 140px;
   margin-right: 30px;
-  background: url("../img/eggs&bacon.jpg");
+  background: url("/img/eggs&bacon.jpg");
   background-position: top right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1817,7 +1817,7 @@ main section.menu div#swiper-menu div.slide-menu div.slide-menu__food div.slider
   width: 100%;
   height: 140px;
   margin-right: 30px;
-  background: url("../img/tea&coffe.jpg");
+  background: url("/img/tea&coffe.jpg");
   background-position: top right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1826,7 +1826,7 @@ main section.menu div#swiper-menu div.slide-menu div.slide-menu__food div.slider
   width: 100%;
   height: 140px;
   margin-right: 30px;
-  background: url("../img/chia.jpg");
+  background: url("/img/chia.jpg");
   background-position: top right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1835,7 +1835,7 @@ main section.menu div#swiper-menu div.slide-menu div.slide-menu__food div.slider
   width: 100%;
   height: 140px;
   margin-right: 30px;
-  background: url("../img/fruit.jpg");
+  background: url("/img/fruit.jpg");
   background-position: top right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1844,7 +1844,7 @@ main section.menu div#swiper-menu div.slide-menu div.slide-menu__food div.slider
   width: 100%;
   height: 140px;
   margin-right: 30px;
-  background: url("../img/marmalade.jpeg");
+  background: url("/img/marmalade.jpeg");
   background-position: top right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1853,7 +1853,7 @@ main section.menu div#swiper-menu div.slide-menu div.slide-menu__food div.slider
   width: 100%;
   height: 140px;
   margin-right: 30px;
-  background: url("../img/cheeseplate.jpg");
+  background: url("/img/cheeseplate.jpg");
   background-position: top right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2462,7 +2462,7 @@ main section.facilities-about-us div#swiper-facilities-about-us div.slider-facil
   margin-bottom: 40px;
 }
 main section.facilities-about-us div#swiper-facilities-about-us div.facilities-about-us-slide__article1 {
-  background: url("../img/01-black.png");
+  background: url("/img/01-black.png");
   background-position: top right;
   background-repeat: no-repeat;
   background-position-x: 90%;
@@ -2470,7 +2470,7 @@ main section.facilities-about-us div#swiper-facilities-about-us div.facilities-a
   background-color: rgb(41, 41, 41);
 }
 main section.facilities-about-us div#swiper-facilities-about-us div.facilities-about-us-slide__article2 {
-  background: url("../img/02-black.png");
+  background: url("/img/02-black.png");
   background-position: top right;
   background-repeat: no-repeat;
   background-position-x: 90%;
@@ -2478,7 +2478,7 @@ main section.facilities-about-us div#swiper-facilities-about-us div.facilities-a
   background-color: rgb(41, 41, 41);
 }
 main section.facilities-about-us div#swiper-facilities-about-us div.facilities-about-us-slide__article3 {
-  background: url("../img/03-black.png");
+  background: url("/img/03-black.png");
   background-position: top right;
   background-repeat: no-repeat;
   background-position-x: 90%;
@@ -2486,7 +2486,7 @@ main section.facilities-about-us div#swiper-facilities-about-us div.facilities-a
   background-color: rgb(41, 41, 41);
 }
 main section.facilities-about-us div#swiper-facilities-about-us div.facilities-about-us-slide__article4 {
-  background: url("../img/04-black.png");
+  background: url("/img/04-black.png");
   background-position: top right;
   background-repeat: no-repeat;
   background-position-x: 90%;
@@ -2494,7 +2494,7 @@ main section.facilities-about-us div#swiper-facilities-about-us div.facilities-a
   background-color: rgb(41, 41, 41);
 }
 main section.facilities-about-us div#swiper-facilities-about-us div.facilities-about-us-slide__article5 {
-  background: url("../img/05-black.png");
+  background: url("/img/05-black.png");
   background-position: top right;
   background-repeat: no-repeat;
   background-position-x: 90%;
@@ -2502,7 +2502,7 @@ main section.facilities-about-us div#swiper-facilities-about-us div.facilities-a
   background-color: rgb(41, 41, 41);
 }
 main section.facilities-about-us div#swiper-facilities-about-us div.facilities-about-us-slide__article6 {
-  background: url("../img/06-black.png");
+  background: url("/img/06-black.png");
   background-position: top right;
   background-repeat: no-repeat;
   background-position-x: 90%;
@@ -2525,6 +2525,7 @@ main section.facilities-about-us div#swiper-facilities-about-us div#facilities-a
     margin: auto;
     margin-bottom: 60px;
     max-width: 1300px;
+    height: auto;
   }
   main section.facilities-about-us div#swiper-facilities-about-us div,
   main section.facilities-about-us div#swiper-facilities-about-us h3,
@@ -2539,6 +2540,7 @@ main section.facilities-about-us div#swiper-facilities-about-us div#facilities-a
     justify-content: flex-start;
     justify-content: space-around;
     gap: 2%;
+    height: auto;
   }
   main section.facilities-about-us div#swiper-facilities-about-us div.swiper-wrapper-about-us div.slider-facilities-about-us-articles:hover {
     transform: scale(1.2, 1.2);
@@ -2571,7 +2573,7 @@ main section.facilities-about-us div#swiper-facilities-about-us div#facilities-a
     color: rgb(119, 119, 119);
   }
   main section.facilities-about-us div#swiper-facilities-about-us div.swiper-wrapper-about-us div.facilities-about-us-slide__article1 {
-    background: url("../img/01-black.png");
+    background: url("/img/01-black.png");
     background-position: top right;
     background-repeat: no-repeat;
     background-position-x: 90%;
@@ -2580,7 +2582,7 @@ main section.facilities-about-us div#swiper-facilities-about-us div#facilities-a
     background-size: 100px;
   }
   main section.facilities-about-us div#swiper-facilities-about-us div.swiper-wrapper-about-us div.facilities-about-us-slide__article2 {
-    background: url("../img/02-black.png");
+    background: url("/img/02-black.png");
     background-position: top right;
     background-repeat: no-repeat;
     background-position-x: 90%;
@@ -2589,7 +2591,7 @@ main section.facilities-about-us div#swiper-facilities-about-us div#facilities-a
     background-size: 100px;
   }
   main section.facilities-about-us div#swiper-facilities-about-us div.swiper-wrapper-about-us div.facilities-about-us-slide__article3 {
-    background: url("../img/03-black.png");
+    background: url("/img/03-black.png");
     background-position: top right;
     background-repeat: no-repeat;
     background-position-x: 90%;
@@ -2598,7 +2600,7 @@ main section.facilities-about-us div#swiper-facilities-about-us div#facilities-a
     background-size: 100px;
   }
   main section.facilities-about-us div#swiper-facilities-about-us div.swiper-wrapper-about-us div.facilities-about-us-slide__article4 {
-    background: url("../img/04-black.png");
+    background: url("/img/04-black.png");
     background-position: top right;
     background-repeat: no-repeat;
     background-position-x: 90%;
@@ -2607,7 +2609,7 @@ main section.facilities-about-us div#swiper-facilities-about-us div#facilities-a
     background-size: 100px;
   }
   main section.facilities-about-us div#swiper-facilities-about-us div.swiper-wrapper-about-us div.facilities-about-us-slide__article5 {
-    background: url("../img/05-black.png");
+    background: url("/img/05-black.png");
     background-position: top right;
     background-repeat: no-repeat;
     background-position-x: 90%;
@@ -2616,7 +2618,7 @@ main section.facilities-about-us div#swiper-facilities-about-us div#facilities-a
     background-size: 100px;
   }
   main section.facilities-about-us div#swiper-facilities-about-us div.swiper-wrapper-about-us div.facilities-about-us-slide__article6 {
-    background: url("../img/06-black.png");
+    background: url("/img/06-black.png");
     background-position: top right;
     background-repeat: no-repeat;
     background-position-x: 90%;
@@ -4204,17 +4206,17 @@ main div.contact-info div.contact-info__container div.contact-info-container__da
   background: none;
 }
 main div.contact-info div.contact-info__container:nth-child(1) {
-  background: url("../img/01.png");
+  background: url("/img/01.png");
   background-position: top right;
   background-repeat: no-repeat;
 }
 main div.contact-info div.contact-info__container:nth-child(2) {
-  background: url("../img/02.png");
+  background: url("/img/02.png");
   background-position: top right;
   background-repeat: no-repeat;
 }
 main div.contact-info div.contact-info__container:nth-child(3) {
-  background: url("../img/03.png");
+  background: url("/img/03.png");
   background-position: top right;
   background-repeat: no-repeat;
   margin-bottom: 0px;

@@ -13,12 +13,12 @@ burguer_icon.addEventListener('click', () => {
         nav_menu.style.top = '85px';
         nav_menu.style.transition = '0.5s';
         nav_menu.style.paddingBottom = '15px';
-        img_icon.src = '../img/close_icon.png';
+        img_icon.src = '/img/close_icon.png';
         check_menu = false;
     } else {
         nav_menu.style.top = '-250px';
         nav_menu.style.transition = '0.5s';
-        img_icon.src = '../img/burguer_icon.png';
+        img_icon.src = '/img/burguer_icon.png';
         check_menu = true;
     }
 });
@@ -456,6 +456,7 @@ if(title === 'Offers') {
 }
 
 /* ----CONTACT---- */
+/* TODO HACERLO CON UNA FUNCION EL TEMA DEL TOSTIFY */
 
 if(title === 'Contact') {
     let form_contact = document.querySelector('#form_contact');

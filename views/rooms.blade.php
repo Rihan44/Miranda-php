@@ -25,11 +25,11 @@
             <form class="banner-checkdate__form" id="form_check_availability" method="GET">
                 <div class="banner-checkdate-form__input-container">
                     <label for="arrive">Arrival date</label>
-                    <input type="date" name="check_in" id="check_in_rooms" min="{{$today_date}}"/>
+                    <input type="date" name="check_in" id="check_in_rooms" min="<?=date('Y-m-d')?>" required/>
                 </div>
                 <div class="banner-checkdate-form__input-container">
                     <label>Departure Date</label>
-                    <input type="date" name="check_out" id="check_out_rooms"/>
+                    <input type="date" name="check_out" id="check_out_rooms" required/>
                 </div>
                 <button class="banner-checkdate-form__button" type="submit">
                     CHECK AVAILABILITY
@@ -41,13 +41,13 @@
         @foreach ($rooms as $room)
         <div class="rooms-list__room">
             <div class="discover-rooms__icons">
-                <img class="discover-rooms-icons__img" src="../img/bed-icon.png" alt="bed-icon" />
-                <img class="discover-rooms-icons__img" src="../img/wifi-icon.png" alt="wifi-icon" />
-                <img class="discover-rooms-icons__img" src="../img/car-icon.png" alt="car-icon" />
-                <img class="discover-rooms-icons__img" src="../img/cold-icon.png" alt="snow-icon" />
-                <img class="discover-rooms-icons__img" src="../img/gym-icon.png" alt="gym-icon" />
-                <img class="discover-rooms-icons__img" src="../img/no-smoking-icon.png" alt="no-smoking-icon" />
-                <img class="discover-rooms-icons__img" src="../img/cocktail-icon.png" alt="cocktail-icon" />
+                <img class="discover-rooms-icons__img" src="/img/bed-icon.png" alt="bed-icon" />
+                <img class="discover-rooms-icons__img" src="/img/wifi-icon.png" alt="wifi-icon" />
+                <img class="discover-rooms-icons__img" src="/img/car-icon.png" alt="car-icon" />
+                <img class="discover-rooms-icons__img" src="/img/cold-icon.png" alt="snow-icon" />
+                <img class="discover-rooms-icons__img" src="/img/gym-icon.png" alt="gym-icon" />
+                <img class="discover-rooms-icons__img" src="/img/no-smoking-icon.png" alt="no-smoking-icon" />
+                <img class="discover-rooms-icons__img" src="/img/cocktail-icon.png" alt="cocktail-icon" />
             </div>
             <img class="rooms-list-room__img" src="{{$room['URL']}}" alt="room" />
             <h3 class="rooms-list-room__h3">{{$room['room_type']}}</h3>

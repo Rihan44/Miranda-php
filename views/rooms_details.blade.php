@@ -42,17 +42,17 @@
         <h4 class="room-details-type-availability__h4">Check Availability</h4>
         <form class="room-details-type-availability__form" id="room-details-type-availability__form" method="POST">
             <label for="check-in">Check In</label>
-            <input type="date" name="check-in" id="room-details-type-availability-form__check-in" min="{{$today_date}}"/>
+            <input type="date" name="check-in" id="room-details-type-availability-form__check-in" min="<?=date('Y-m-d')?>" required/>
             <label for="check-out">Check Out</label>
-            <input type="date" name="check-out" id="room-details-type-availability-form__check-out" />
+            <input type="date" name="check-out" id="room-details-type-availability-form__check-out" required/>
             <label for="name">Full Name</label>
-            <input type="text" name="name" id="room-details-type-availability-form__name" placeholder="Full Name" />
+            <input type="text" name="name" id="room-details-type-availability-form__name" placeholder="Full Name" required/>
             <label for="email">Email</label>
-            <input type="email" name="email" id="room-details-type-availability-form__email" placeholder="Email" />
+            <input type="email" name="email" id="room-details-type-availability-form__email" placeholder="Email" required/>
             <label for="phone">Phone</label>
-            <input type="text" name="phone" id="room-details-type-availability-form__phone" placeholder="Number Phone" />
+            <input type="text" name="phone" id="room-details-type-availability-form__phone" placeholder="Number Phone" required/>
             <label for="message">Message</label>
-            <input type="text" name="message" id="room-details-type-availability-form__message" placeholder="Your Message" />
+            <input type="text" name="message" id="room-details-type-availability-form__message" placeholder="Your Message" required/>
             <button 
                 id="room-details-type-availability-form__button" 
                 class="room-details-type-availability-form__button" 
@@ -71,70 +71,70 @@
     <div class="room-details-amenitie__container">
         <div class="room-details-amenities__icon-container">
             <div class="room-details-amenities-icon-container__info">
-                <img class="room-details-amenities-icon-container-info__img" src="../img/air-icon.png" alt="air" />
+                <img class="room-details-amenities-icon-container-info__img" src="/img/air-icon.png" alt="air" />
                 <p class="room-details-amenities-icon-container-info__paraph">
                     Air conditioner
                 </p>
             </div>
             <div class="room-details-amenities-icon-container__info">
-                <img class="room-details-amenities-icon-container-info__img" src="../img/launch-icon.png" alt="launch" />
+                <img class="room-details-amenities-icon-container-info__img" src="/img/launch-icon.png" alt="launch" />
                 <p class="room-details-amenities-icon-container-info__paraph">
                     Breakfast
                 </p>
             </div>
             <div class="room-details-amenities-icon-container__info">
-                <img class="room-details-amenities-icon-container-info__img" src="../img/cleaning-icon.png" alt="cleaning" />
+                <img class="room-details-amenities-icon-container-info__img" src="/img/cleaning-icon.png" alt="cleaning" />
                 <p class="room-details-amenities-icon-container-info__paraph">
                     Cleaning
                 </p>
             </div>
             <div class="room-details-amenities-icon-container__info">
-                <img class="room-details-amenities-icon-container-info__img" src="../img/grocery-icon.png" alt="grocery" />
+                <img class="room-details-amenities-icon-container-info__img" src="/img/grocery-icon.png" alt="grocery" />
                 <p class="room-details-amenities-icon-container-info__paraph">
                     Grocery
                 </p>
             </div>
             <div class="room-details-amenities-icon-container__info">
-                <img class="room-details-amenities-icon-container-info__img" src="../img/shopper-icon.png" alt="shop" />
+                <img class="room-details-amenities-icon-container-info__img" src="/img/shopper-icon.png" alt="shop" />
                 <p class="room-details-amenities-icon-container-info__paraph">Shop near</p>
             </div>
             <div class="room-details-amenities-icon-container__info">
-                <img class="room-details-amenities-icon-container-info__img" src="../img/headphone-icon.png" alt="headphones" />
+                <img class="room-details-amenities-icon-container-info__img" src="/img/headphone-icon.png" alt="headphones" />
                 <p class="room-details-amenities-icon-container-info__paraph">24/7 Online Support</p>
             </div>
             <div class="room-details-amenities-icon-container__info">
-                <img class="room-details-amenities-icon-container-info__img" src="../img/locked-icon.png" alt="locked" />
+                <img class="room-details-amenities-icon-container-info__img" src="/img/locked-icon.png" alt="locked" />
                 <p class="room-details-amenities-icon-container-info__paraph">Smart Security</p>
             </div>
         </div>
 
         <div class="room-details-amenities__icon-container container__2">
             <div class="room-details-amenities-icon-container__info">
-                <img class="room-details-amenities-icon-container-info__img" src="../img/wifi-gold-icon.png" alt="wifi" />
+                <img class="room-details-amenities-icon-container-info__img" src="/img/wifi-gold-icon.png" alt="wifi" />
                 <p class="room-details-amenities-icon-container-info__paraph">High speed WIFI</p>
             </div>
             <div class="room-details-amenities-icon-container__info">
-                <img class="room-details-amenities-icon-container-info__img" src="../img/kitchen-icon.png" alt="kitchen" />
+                <img class="room-details-amenities-icon-container-info__img" src="/img/kitchen-icon.png" alt="kitchen" />
                 <p class="room-details-amenities-icon-container-info__paraph">Kitchen</p>
             </div>
             <div class="room-details-amenities-icon-container__info">
-                <img class="room-details-amenities-icon-container-info__img" src="../img/bath-icon.png" alt="batch" />
+                <img class="room-details-amenities-icon-container-info__img" src="/img/bath-icon.png" alt="batch" />
                 <p class="room-details-amenities-icon-container-info__paraph">Shower</p>
             </div>
             <div class="room-details-amenities-icon-container__info">
-                <img class="room-details-amenities-icon-container-info__img" src="../img/single-bed-icon.png" alt="single-bed" />
+                <img class="room-details-amenities-icon-container-info__img" src="/img/single-bed-icon.png" alt="single-bed" />
                 <p class="room-details-amenities-icon-container-info__paraph">Single bed</p>
             </div>
             <div class="room-details-amenities-icon-container__info">
-                <img class="room-details-amenities-icon-container-info__img" src="../img/toalla-icon.png" alt="towel" />
+                <img class="room-details-amenities-icon-container-info__img" src="/img/toalla-icon.png" alt="towel" />
                 <p class="room-details-amenities-icon-container-info__paraph">Towels</p>
             </div>
             <div class="room-details-amenities-icon-container__info">
-                <img class="room-details-amenities-icon-container-info__img" src="../img/llave-icon.png" alt="key-locker" />
+                <img class="room-details-amenities-icon-container-info__img" src="/img/llave-icon.png" alt="key-locker" />
                 <p class="room-details-amenities-icon-container-info__paraph">Strong Locker</p>
             </div>
             <div class="room-details-amenities-icon-container__info">
-                <img class="room-details-amenities-icon-container-info__img" src="../img/expert-icon.png" alt="expert" />
+                <img class="room-details-amenities-icon-container-info__img" src="/img/expert-icon.png" alt="expert" />
                 <p class="room-details-amenities-icon-container-info__paraph">Expert Team</p>
             </div>
         </div>
@@ -143,9 +143,9 @@
 
 <div class="founder">
     <div class="founder__img-container">
-        <img class="founder-img-container__img" src="../img/rosalina-img.jpg" alt="rosalina" />
+        <img class="founder-img-container__img" src="/img/rosalina-img.jpg" alt="rosalina" />
         <div class="founder-img-container__square">
-            <img class="founder-img-container-square-check__img" src="../img/white-check-icon.png" alt="check" />
+            <img class="founder-img-container-square-check__img" src="/img/white-check-icon.png" alt="check" />
         </div>
     </div>
     <h2 class="founder__h2">Rosalina D. William</h2>
@@ -170,13 +170,13 @@
                 @foreach ($two_rooms as $room)
                 <div class="swiper-slide slide-img1">
                     <div class="discover-rooms__icons">
-                        <img class="discover-rooms-icons__img" src="../img/bed-icon.png" alt="bed-icon" />
-                        <img class="discover-rooms-icons__img" src="../img/wifi-icon.png" alt="wifi-icon" />
-                        <img class="discover-rooms-icons__img" src="../img/car-icon.png" alt="car-icon" />
-                        <img class="discover-rooms-icons__img" src="../img/cold-icon.png" alt="snow-icon" />
-                        <img class="discover-rooms-icons__img" src="../img/gym-icon.png" alt="gym-icon" />
-                        <img class="discover-rooms-icons__img" src="../img/no-smoking-icon.png" alt="no-smoking-icon" />
-                        <img class="discover-rooms-icons__img" src="../img/cocktail-icon.png" alt="cocktail-icon" />
+                        <img class="discover-rooms-icons__img" src="/img/bed-icon.png" alt="bed-icon" />
+                        <img class="discover-rooms-icons__img" src="/img/wifi-icon.png" alt="wifi-icon" />
+                        <img class="discover-rooms-icons__img" src="/img/car-icon.png" alt="car-icon" />
+                        <img class="discover-rooms-icons__img" src="/img/cold-icon.png" alt="snow-icon" />
+                        <img class="discover-rooms-icons__img" src="/img/gym-icon.png" alt="gym-icon" />
+                        <img class="discover-rooms-icons__img" src="/img/no-smoking-icon.png" alt="no-smoking-icon" />
+                        <img class="discover-rooms-icons__img" src="/img/cocktail-icon.png" alt="cocktail-icon" />
                     </div>
                     <img class="swiper-slide__img" src="{{$room['URL']}}" alt="img1" />
                     <div class="box-container">

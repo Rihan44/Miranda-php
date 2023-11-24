@@ -1,5 +1,4 @@
 <?php 
-require_once('setup.php');
 require_once('config.php');
 
 $sql = "SELECT r.*, COALESCE(GROUP_CONCAT(DISTINCT rp.room_photo_url), 'https://tinyurl.com/RoomPhoto1') AS URL 

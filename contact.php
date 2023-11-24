@@ -1,6 +1,7 @@
 <?php 
-require_once('setup.php');
 require_once('config.php');
+
+$form_sent = false;
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
     if(isset($_POST['name']) && isset($_POST['number'])
@@ -22,9 +23,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $conn->query($sql);
         $conn->close();
 
-    } else {
-        $form_sent = false;
-    }
+    } 
 }
 
 echo $blade->run('contact', ['form_sent' => $form_sent, 'notification' => $notification]);

@@ -6,6 +6,30 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
      <link rel="stylesheet" href="../styles/styles.css">
+     <script src="https://kit.fontawesome.com/b85064bdf0.js" crossorigin="anonymous" defer></script>
+     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
+     <script type="text/javascript" src="../scripts/main.js" defer></script>
+     @yield('scripts')
+     
+     @if($form_sent)
+        <script defer>
+            Toastify({
+                text: "{{$notification}}",
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top", 
+                position: "center", 
+                stopOnFocus: true, 
+                style: {
+                    background: "rgba(17, 17, 17, 1)",
+                    color: "rgba(153, 153, 153, 1)"
+                }
+                }).showToast();
+        </script> 
+     @endif
+
      <title>@yield('title')</title>
  </head>
 
@@ -137,27 +161,5 @@
              <p class="footer-copyright__paraph">Terms of use | Privacy Environmental Policy</p>
          </div>
      </footer>
-     <script src="https://kit.fontawesome.com/b85064bdf0.js" crossorigin="anonymous"></script>
-     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-     <script type="text/javascript" src="../scripts/main.js"></script>
-     @if($form_sent)
-        <script>
-            Toastify({
-                text: "{{$notification}}",
-                duration: 3000,
-                newWindow: true,
-                close: true,
-                gravity: "top", 
-                position: "center", 
-                stopOnFocus: true, 
-                style: {
-                    background: "rgba(17, 17, 17, 1)",
-                    color: "rgba(153, 153, 153, 1)"
-                }
-                }).showToast();
-        </script> 
-     @endif
-     @yield('scripts')
  </body>
  </html>

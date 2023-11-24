@@ -713,7 +713,7 @@ class BladeOne
      * This function uses the current url and the baseurl
      *
      * @param string $relativeWeb . Example img/images.jpg
-     * @return string  Example ../../img/images.jpg
+     * @return string  Example ..//img/images.jpg
      */
     public function relative($relativeWeb): string
     {
