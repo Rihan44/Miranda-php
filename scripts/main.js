@@ -547,7 +547,50 @@ if(title === 'Contact') {
         }
     
     });
+}
 
+/* ----- ROOMS -------- */
+if(title === 'Rooms'){
+
+    let my__swiper = document.querySelector('.my__swiper');
+
+    function swiperRooms() {
+        if (window.matchMedia("(min-width: 1000px").matches) {
+            new Swiper(".my__swiper", {
+                direction: "horizontal",
+                slidesPerView: 3,
+                grid: {
+                    rows: 2,
+                },
+                pagination: {
+                    el: ".rooms__swiper-pagination",
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                        return '<span class="' + className + '">' + (index + 1) + "</span>";
+                    },
+                },
+            });
+        } else {
+            new Swiper(".my__swiper", {
+                direction: "vertical",
+                slidesPerView: 3,
+                spaceBetween: 300,
+                pagination: {
+                    el: ".rooms__swiper-pagination",
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                        return '<span class="' + className + '">' + (index + 1) + "</span>";
+                    },
+                },
+            });
+        }
+    }
+
+    swiperRooms();
+   
+    window.addEventListener('resize', () => {
+        swiperRooms();
+    })
 }
 
 
