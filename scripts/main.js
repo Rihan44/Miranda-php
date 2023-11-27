@@ -416,7 +416,7 @@ if(title === 'Room Detail') {
                     color: "#fff"
                 }
                 }).showToast();
-        }  
+        }
     });
 }
 
