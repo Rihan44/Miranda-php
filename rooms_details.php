@@ -24,15 +24,16 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     if(isset($_POST['check-in']) && isset($_POST['check-out'])
     && isset($_POST['name']) && isset($_POST['email'])
     && isset($_POST['phone']) && isset($_POST['message'])) {
-        $full_name = $_POST['name'];
-        $phone_number = $_POST['phone'];
+        
+        $full_name = htmlspecialchars($_POST['name']);
+        $phone_number = htmlspecialchars($_POST['phone']);
         $order_date = date('Y-m-d');
-        $check_in = $_POST['check-in'];
-        $check_out = $_POST['check-out'];
-        $message = $_POST['message'];
+        $check_in = htmlspecialchars($_POST['check-in']);
+        $check_out = htmlspecialchars($_POST['check-out']);
+        $message = htmlspecialchars($_POST['message']);
         $price = $room[0]['price'];
-        $email = $_POST['email'];
-        $room_id = $_GET['id'];
+        $email = htmlspecialchars($_POST['email']);
+        $room_id = htmlspecialchars($_GET['id']);
 
         $sql = "INSERT INTO bookings (guest, phone_number, order_date, check_in, check_out, special_request, price, email, room_id) VALUES ('$full_name', '$phone_number', '$order_date', '$check_in', '$check_out', '$message', '$price', '$email', '$room_id')";
 

@@ -2,32 +2,28 @@
 require_once('config.php');
 
 if(isset($_GET['check_in']) && isset($_GET['check_out'])) {
-    $check_in = $_GET['check_in'];
-    $check_out = $_GET['check_out'];
+    $check_in = htmlspecialchars($_GET['check_in']);
+    $check_out = htmlspecialchars($_GET['check_out']);
 
-    $sql = "SELECT check_in, check_out, room_id FROM bookings 
-            WHERE check_in >= '$check_in' AND check_out <= '$check_out'";
-    
-    $result_bookings = $conn->query($sql);
-    $rooms_bookings = $result_bookings->fetch_all(MYSQLI_ASSOC);
+    $sql = "SELECT r.*, COALESCE(GROUP_CONCAT(DISTINCT rp.room_photo_url), 'https://tinyurl.com/RoomPhoto1') AS URL 
+        FROM rooms r
+        LEFT JOIN room_photos rp ON r.id = rp.room_id
+        LEFT JOIN bookings b ON r.id = b.room_id
+        WHERE (
+            ('$check_in' >= b.check_out OR '$check_out' <= b.check_in)
+        )
+        OR b.room_id IS NULL
+        GROUP BY r.id";
 
-    $room_queries = array();
-
-    foreach ($rooms_bookings as $row) { 
-        $room_queries[] = "SELECT r.*, COALESCE(GROUP_CONCAT(DISTINCT rp.room_photo_url), 'https://tinyurl.com/RoomPhoto1') AS URL FROM rooms r LEFT JOIN room_photos rp ON r.id = rp.room_id WHERE r.id = ".$row['room_id'];
-    }
+    $result = $conn->query($sql);
 
     $rooms = array();
 
-    foreach ($room_queries as $sql_rooms) {
-        $result_rooms = $conn->query($sql_rooms);
-
-        while ($roomRow = $result_rooms->fetch_assoc()) {
-            $rooms[] = $roomRow;
-        }
+    while ($row = $result->fetch_assoc()) {
+        $rooms[] = $row;
     }
-    
-    if(count($rooms) <= 0){
+
+    if (count($rooms) <= 0) {
         $no_rooms = true;
     } else {
         $no_rooms = false;

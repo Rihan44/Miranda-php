@@ -5,10 +5,6 @@
     $result = $conn->query($sql);
     $rooms = $result->fetch_all(MYSQLI_ASSOC);
 
-    if(isset($_GET['check_in']) && isset($_GET['check_out'])) {
-        header("Location: rooms.php?check_in=".$_GET['check_in']."&check_out=".$_GET['check_out']);
-    }
-
     echo $blade->run('home', ['rooms' => $rooms]);
 
     $conn->close();
