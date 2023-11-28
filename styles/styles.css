@@ -2850,6 +2850,26 @@ main section.rooms__list {
   width: 100%;
   margin-bottom: 30px;
 }
+main section.rooms__list div.rooms__list-pagination {
+  text-align: center;
+  margin-top: 50px;
+}
+main section.rooms__list div.rooms__list-pagination button.btn__rooms-pag {
+  background-color: rgb(190, 173, 142);
+  width: 40px;
+  height: 40px;
+  border: none;
+  transition: 0.3s;
+}
+main section.rooms__list div.rooms__list-pagination button.btn__rooms-pag a {
+  padding: 10px;
+  background: none;
+  font-size: 16px;
+  color: #fff;
+}
+main section.rooms__list div.rooms__list-pagination button.btn__rooms-pag:hover {
+  transform: scale(1.1);
+}
 main section.rooms__list h3.rooms__list-no-rooms {
   text-align: center;
   margin-top: 60px;

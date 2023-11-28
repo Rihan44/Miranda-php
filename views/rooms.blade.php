@@ -16,56 +16,6 @@
             Rooms
         </a>
     </div>
-    <style>
-        .swiper {
-            width: 1400px;
-            max-width: 1300px;
-            height: 1200px;
-            overflow-x: hidden;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
-            height: 550px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .swiper-pagination.rooms__swiper-pagination {
-            bottom: 20px;
-        }
-
-        .swiper-pagination-bullet {
-            width: 20px;
-            height: 20px;
-            text-align: center;
-            margin-top: 50px;
-            line-height: 20px;
-            font-size: 12px;
-            color: #000;
-            opacity: 1;
-            border-radius: 0;
-            background: rgba(0, 0, 0, 0.2);
-        }
-
-        .swiper-pagination-bullet-active {
-            margin: 0 5px !important;
-            width: 30px !important;
-            height: 30px !important;
-            line-height: 30px !important;
-            font-size: 16px !important;
-            background-color: #bead8e !important;
-            color: #fff !important;
-            border-radius: 50% !important;
-            text-align: center !important;
-            justify-content: center !important;
-        }
-    </style>
 </section>
 
 <section class="rooms__list">
@@ -87,36 +37,36 @@
             </form>
         </section>
     @else
-    <div class="rooms-list-grid__container">
-        <div class="swiper my__swiper">
-            <div class="swiper-wrapper">
-                @foreach ($rooms as $room)
-                <div class="swiper-slide">
-                    <div class="rooms-list__room">
-                        <div class="discover-rooms__icons">
-                            @foreach ($amenities_array as $amenity)
-                                @if (isset($amenity_icons[$amenity]))
-                                    <img class="discover-rooms-icons__img" src="{{ $amenity_icons[$amenity] }}" alt="{{ $amenity }}" />
-                                @endif
-                            @endforeach
-                        </div>
-                        <img class="rooms-list-room__img" src="{{$room['URL']}}" alt="room" />
-                        <h3 class="rooms-list-room__h3">{{$room['room_type']}}</h3>
-                        <p class="rooms-list-room__paraph">{{$room['description']}}</p>
-                        <div class="rooms-list-room__price-info">
-                            <h2 class="rooms-list-room-price-info__h2">${{$room['price']}}/Night</h2>
-                            <button class="rooms-list-room-price-info__button">
-                                <a href="rooms_details.php?id={{$room['id']}}">Booking now</a>
-                            </button>
-                        </div>
+        <div class="rooms-list-grid__container">
+            @foreach ($paginated_rooms as $room)
+                <div class="rooms-list__room">
+                    <div class="discover-rooms__icons">
+                        @foreach ($amenities_array as $amenity)
+                            @if (isset($amenity_icons[$amenity]))
+                                <img class="discover-rooms-icons__img" src="{{ $amenity_icons[$amenity] }}" alt="{{ $amenity }}" />
+                            @endif
+                        @endforeach
+                    </div>
+                    <img class="rooms-list-room__img" src="{{$room['URL']}}" alt="room" />
+                    <h3 class="rooms-list-room__h3">{{$room['room_type']}}</h3>
+                    <p class="rooms-list-room__paraph">{{$room['description']}}</p>
+                    <div class="rooms-list-room__price-info">
+                        <h2 class="rooms-list-room-price-info__h2">${{$room['price']}}/Night</h2>
+                        <button class="rooms-list-room-price-info__button">
+                            <a href="rooms_details.php?id={{$room['id']}}">Booking now</a>
+                        </button>
                     </div>
                 </div>
-                @endforeach
-            </div>
-            <div class="swiper-pagination rooms__swiper-pagination"></div>
+            @endforeach
         </div>
-    </div>
+        <div class="rooms__list-pagination">
+            @for ($i = 1; $i <= $total_pages; $i++) 
+                <button class="btn__rooms-pag">
+                    <a class="{{ $i == $current_pag ? 'active' : '' }}" href="?pag={{ $i }}">{{ $i }}</a>
+                </button>
+            @endfor
+        </div>
     @endif
-   
+
 </section>
 @endsection
