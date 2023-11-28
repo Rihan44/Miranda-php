@@ -61,12 +61,11 @@
         </div>
         <div class="rooms__list-pagination">
             @for ($i = 1; $i <= $total_pages; $i++) 
-                <button class="btn__rooms-pag">
-                    <a class="{{ $i == $current_pag ? 'active' : '' }}" href="?pag={{ $i }}">{{ $i }}</a>
+                <button class="{{$_GET['pag'] == $i ? 'btn__rooms-pag active': 'btn__rooms-pag'}}">
+                    <a href="?pag={{ $i }}">{{ $i }}</a>
                 </button>
             @endfor
         </div>
     @endif
-
 </section>
 @endsection

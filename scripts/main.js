@@ -5,6 +5,7 @@ let nav_menu = document.getElementById('nav_menu');
 let check_menu = true;
 let dw = document.querySelector('#form_check_availability');
 let title = document.title;
+let menu_links = document.getElementsByClassName('menu__link');
 
 /* HEADER MOVIL */
 
@@ -212,6 +213,19 @@ if(title === 'Home') {
     
 }
 
+function activeNav(url){
+    for (let i = 0; i < menu_links.length; i++) {
+        let pos = menu_links[i].href.lastIndexOf('/');
+        let result = menu_links[i].href.substring(pos + 1);
+        
+        if(result == url) {
+            menu_links[i].classList.add('active');
+        } else {
+            menu_links[i].classList.remove('active');
+        }
+    }
+}
+
 /* -------ABOUT US------- */
 
 if(title === 'About Us'){
@@ -220,6 +234,7 @@ if(title === 'About Us'){
     
     let swiper_counter = document.querySelector('#swiper-counter');
     let swiper_wrapper_counter = document.querySelector('.swiper-wrapper__counter');
+    activeNav('about_us.php');
 
     function initSwiperAbout() {
         if (window.matchMedia("(max-width: 1000px").matches) {
@@ -281,6 +296,7 @@ if(title === 'About Us'){
 if(title === 'Room Detail') {
     let swiper_rooms_details = document.querySelector('#swiper-rooms-details');
     let swiper_wrapper__rooms_details = document.querySelector('.swiper-wrapper__rooms-details');
+
     function initSwiperRoomsDetails() {
         if (window.matchMedia("(max-width: 1000px").matches) {
             swiper_rooms_details.classList.add('swiper');
@@ -425,6 +441,8 @@ if(title === 'Room Detail') {
 if(title === 'Offers') {
     let swipper_rooms_offers = document.querySelector('#swipper-rooms-offers');
     let swiper_wrapper_rooms_offers = document.querySelector('.swiper-wrapper__rooms-offers');
+    activeNav('offers.php');
+
     function initSwiperRoomsOffers() {
         if (window.matchMedia("(max-width: 1000px").matches) {
             swipper_rooms_offers.classList.add('swiper');
@@ -465,6 +483,8 @@ if(title === 'Contact') {
     let email_input = document.querySelector('#email-input');
     let subject_input = document.querySelector('#subject-input');
     let message = document.querySelector('#message');
+
+    activeNav('contact.php');
 
     form_contact.addEventListener('submit', (e) => {
 
@@ -552,7 +572,7 @@ if(title === 'Contact') {
 /* ----- ROOMS -------- */
 if(title === 'Rooms'){
 
-    let my__swiper = document.querySelector('.my__swiper');
+    activeNav('rooms.php');
 
     function swiperRooms() {
         if (window.matchMedia("(min-width: 1000px").matches) {

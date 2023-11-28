@@ -207,6 +207,9 @@ header.header nav.header-menu__burguer ul.header-menu__items li a {
   font-weight: 600;
   background: none;
 }
+header.header nav.header-menu__burguer ul.header-menu__items li a.active {
+  color: rgb(190, 173, 142);
+}
 header.header nav.header-menu-desktop {
   display: none;
 }
@@ -279,6 +282,9 @@ header.header nav.header-menu-desktop {
   }
   header.header nav.header-menu-desktop ul.header-menu-desktop-menu__items li a:hover {
     transform: scaleX(1.2);
+    color: rgb(190, 173, 142);
+  }
+  header.header nav.header-menu-desktop ul.header-menu-desktop-menu__items li a.active {
     color: rgb(190, 173, 142);
   }
 }
@@ -2869,6 +2875,9 @@ main section.rooms__list div.rooms__list-pagination button.btn__rooms-pag a {
 }
 main section.rooms__list div.rooms__list-pagination button.btn__rooms-pag:hover {
   transform: scale(1.1);
+}
+main section.rooms__list div.rooms__list-pagination button.btn__rooms-pag.active {
+  background-color: black;
 }
 main section.rooms__list h3.rooms__list-no-rooms {
   text-align: center;

@@ -87,6 +87,10 @@ header.header {
           font-weight: 600;
           background: none;
         }
+
+        a.active {
+          color: rgb(190, 173, 142);
+        }
       }
     }
   }
@@ -155,10 +159,15 @@ header.header {
             font-weight: 600;
             background: none;
             transition: 0.5s;
-          &:hover {
-            transform: scaleX(1.2);
-            color: rgb(190, 173, 142);
+
+            &:hover {
+              transform: scaleX(1.2);
+              color: rgb(190, 173, 142);
+            }
           }
+
+          a.active {
+            color: rgb(190, 173, 142);
           }
         }
       }
