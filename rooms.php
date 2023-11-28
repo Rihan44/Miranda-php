@@ -15,7 +15,6 @@ $amenity_icons = [
     'Nice Views' => '/img/bed-icon.png',
 ];
 
-
 if (isset($_GET['check_in']) && isset($_GET['check_out'])) {
     $check_in = htmlspecialchars($_GET['check_in']);
     $check_out = htmlspecialchars($_GET['check_out']);

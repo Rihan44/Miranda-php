@@ -18,6 +18,7 @@
  </div>
  <style>
  .swiper {
+ width: 1400px;
  max-width: 1300px;
  height: 1200px;
  overflow-x: hidden;
