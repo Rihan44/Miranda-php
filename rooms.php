@@ -48,6 +48,18 @@ if (isset($_GET['check_in']) && isset($_GET['check_out'])) {
     } else {
         $no_rooms = false;
     }
+
+    foreach ($rooms as $room) {
+        $amenities_array = explode(',', $room['amenities']);
+    }
+
+    $items_perPage = 5; 
+    $total_rooms = count($rooms);
+    $total_pages = ceil($total_rooms / $items_perPage);
+    $current_pag = isset($_GET['pag']) ? $_GET['pag'] : 1;
+    $offset = ($current_pag - 1) * $items_perPage;
+
+    $paginated_rooms = array_slice($rooms, $offset, $items_perPage);
     
 } else {
 
@@ -79,7 +91,6 @@ if (isset($_GET['check_in']) && isset($_GET['check_out'])) {
     $paginated_rooms = array_slice($rooms, $offset, $items_perPage);
 
     $no_rooms = false;
-
 }
 
 echo $blade->run('rooms', 

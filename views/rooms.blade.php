@@ -61,8 +61,10 @@
         </div>
         <div class="rooms__list-pagination">
             @for ($i = 1; $i <= $total_pages; $i++) 
-                <button class="{{$_GET['pag'] == $i ? 'btn__rooms-pag active': 'btn__rooms-pag'}}">
-                    <a href="?pag={{ $i }}">{{ $i }}</a>
+                <button class="{{ $_GET['pag'] == $i ? 'btn__rooms-pag active' : 'btn__rooms-pag' }}">
+                    <a href="{{ empty($_GET['check_in']) && empty($_GET['check_out']) ? '?pag=' . $i : '?check_in=' . $_GET['check_in'] . '&check_out=' . $_GET['check_out'] . '&pag=' . $i }}">
+                        {{ $i }}
+                    </a>
                 </button>
             @endfor
         </div>
