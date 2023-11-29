@@ -438,6 +438,7 @@ footer div.footer__contact div.footer-contact__container {
   display: flex;
   margin-bottom: 30px;
   background: none;
+  text-align: center;
 }
 @media screen and (min-width: 500px) {
   footer div.footer__contact div.footer-contact__container {
@@ -2525,6 +2526,7 @@ main section.facilities-about-us div#swiper-facilities-about-us div#facilities-a
   main section.facilities-about-us {
     width: 100%;
     margin-bottom: 40px;
+    height: 1000px;
   }
   main section.facilities-about-us div#swiper-facilities-about-us {
     display: flex;
