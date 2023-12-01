@@ -50,6 +50,9 @@ main {
         }
         div.swiper-slide {
           padding-bottom: 15px;
+          box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+          border-radius: 6px;
+          height: auto;
         }
         div#swiper-button-prev-rooms-offers {
           background: $color-principal;
@@ -93,9 +96,10 @@ main {
           padding: 10px;
           position: absolute;
           z-index: 2;
-          top: 56%;
+          top: 49%;
           transform: translateX(12%);
-          box-shadow: 0 8px 16px 0 rgba(138, 138, 138, 0.05);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, .3);
+          border-radius: 10px;
           img.discover-rooms-icons__img {
             width: 15px;
             height: 15px;
@@ -129,8 +133,9 @@ main {
           }
           div.rooms-list-room__price-info {
             display: flex;
-            width: 60%;
+            width: 70%;
             justify-content: space-between;
+
             h2.rooms-list-room-price-info__h2 {
               font-family: $fontPrincipal;
               font-weight: 700;
@@ -149,14 +154,15 @@ main {
               transition: 0.5s;
               border: 2px solid rgba(190, 173, 142, 1);
 
-              &:hover {
-                color: rgba(190, 173, 142, 1);
-                border-bottom: 2px solid rgba(190, 173, 142, 1);
-              }
-
               a {
                 color: rgba(189, 189, 189, 1);
                 background: none;
+                transition: 0.3s;
+
+                &:hover {
+                  color: rgba(190, 173, 142, 1);
+                  border-bottom: 2px solid rgba(190, 173, 142, 1);
+                }
               }
             }
           }
@@ -197,12 +203,9 @@ main {
               padding: 10px;
               position: absolute;
               z-index: 2;
-              top: 47%;
               transform: translateX(12%);
-              box-shadow: 0 8px 16px 0 rgba(138, 138, 138, 0.05);
-              @media screen and ( min-width: 1300px ) {
-                top: 52%;
-              }
+              box-shadow: 10px 10px 10px rgba(0, 0, 0, .3);
+              top: 46%;
               img.discover-rooms-icons__img {
                 width: 15px;
                 height: 15px;
@@ -255,6 +258,7 @@ main {
                   line-height: 18px;
                   color: rgba(189, 189, 189, 1);
                   border: none;
+                  margin-left: 5px;
                 }
               }
             }

@@ -26,7 +26,7 @@
             <h4 class="room-details-type-info__h4">{{$room['room_type']}}</h4>
         </div>
         @if($room['offer_price'])
-            <h3 class="room-details-type-info__h3" style="color: red;">
+            <h3 class="room-details-type-info__h3" style="color: rgb(222, 87, 119);">
                 ${{$room['price'] * $room['discount'] / 100}}<span class="room-details-type-info-h3__span">/Night</span>
             </h3>
         @else 
@@ -143,12 +143,12 @@
 
 <div class="founder">
     <div class="founder__img-container">
-        <img class="founder-img-container__img" src="/img/rosalina-img.jpg" alt="rosalina" />
+        <img class="founder-img-container__img" src="/img/profile1.png" alt="profile" />
         <div class="founder-img-container__square">
             <img class="founder-img-container-square-check__img" src="/img/white-check-icon.png" alt="check" />
         </div>
     </div>
-    <h2 class="founder__h2">Rosalina D. William</h2>
+    <h2 class="founder__h2">A.S Muela Bustamante</h2>
     <h3 class="founder__h3">Founder, Qux Co.</h3>
     <p class="founder__paraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
         incididunt ut labore et dolore.</p>

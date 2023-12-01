@@ -180,10 +180,18 @@ main {
         justify-content: space-around;
         position: absolute;
         padding: 10px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, .3);
+        border-radius: 0 0 5px 0;
+
+        div.room-details-type-info__container {
+          margin-top: 20px;
+        }
       }
       img.room-details-type__img {
         width: 50%;
         height: 490px;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, .2);
       }
       p.room-details-type__paraph {
         width: 50%;

@@ -733,24 +733,31 @@ main section.banner {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10px;
+}
+main section.banner img.banner__img {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  filter: blur(5px);
 }
 main section.banner div.banner__container {
   background: none;
   max-width: 600px;
   margin: auto;
+  z-index: 1;
+  background: none;
+  padding: 0px 10px;
 }
 main section.banner div.banner__container h2.banner__firstitle {
-  background: rgb(51, 51, 51);
   width: 80%;
   font-family: "Archivo", sans-serif;
   line-height: 18px;
   letter-spacing: 2.8px;
   font-size: 0.8em;
   margin-top: 60px;
+  background: none;
 }
 main section.banner div.banner__container h3.banner__secondtitle {
-  background: rgb(51, 51, 51);
   font-family: "Old Standard TT", sans-serif;
   line-height: 60px;
   letter-spacing: -1.2px;
@@ -758,13 +765,15 @@ main section.banner div.banner__container h3.banner__secondtitle {
   font-size: 3.5em;
   width: 100%;
   margin-top: 40px;
+  background: none;
 }
 main section.banner div.banner__container div.banner__buttons {
-  background: rgb(51, 51, 51);
   display: flex;
   flex-direction: column;
   height: auto;
   width: 100%;
+  background: none;
+  margin-top: 50px;
 }
 main section.banner div.banner__container div.banner__buttons button {
   width: 60%;
@@ -779,15 +788,14 @@ main section.banner div.banner__container div.banner__buttons button {
   font-weight: 700;
 }
 main section.banner div.banner__container div.banner__buttons button.banner-buttons__tour {
-  background: rgb(190, 173, 142);
-  margin-bottom: 20px;
-  margin-top: 40px;
+  background: none;
+  border: 2px solid gray;
+  margin-bottom: 30px;
   transition: 0.5s;
-  border: 2px solid rgb(190, 173, 142);
 }
 main section.banner div.banner__container div.banner__buttons button.banner-buttons__tour:hover {
-  background-color: rgb(51, 51, 51);
-  border: 2px solid gray;
+  background: rgb(190, 173, 142);
+  border: 2px solid rgb(190, 173, 142);
 }
 main section.banner div.banner__container div.banner__buttons button.banner-buttons__more {
   background: none;
@@ -809,10 +817,11 @@ main section.banner div.banner__container div.banner__buttons button.banner-butt
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 10px;
+    padding: 0px;
     width: 100%;
     margin-top: 50px;
-    padding-left: 180px;
+    position: relative;
+    z-index: 0;
   }
   main section.banner div.banner__container {
     max-width: 1300px;
@@ -842,7 +851,6 @@ main section.banner div.banner__container div.banner__buttons button.banner-butt
     width: 40%;
   }
   main section.banner div.banner__container div.banner__buttons button.banner-buttons__tour {
-    background: rgb(190, 173, 142);
     margin-bottom: 0px;
     margin-top: 0px;
     margin-right: 40px;
@@ -945,6 +953,7 @@ main section.discover div.discover__titlebox {
   flex-direction: column;
   padding: 20px;
   padding-bottom: 120px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 main section.discover div.discover__titlebox h2.discover-titlebox__about {
   width: 100%;
@@ -1021,7 +1030,7 @@ main section.discover div.discover-strong-team div.discover-strong-team__box {
   height: auto;
   width: 75%;
   background: none;
-  box-shadow: 0 8px 16px 0 rgba(34, 34, 34, 0.02);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 40px;
   position: relative;
   top: -40px;
@@ -1085,6 +1094,7 @@ main section.discover div.discover-luxury-room div.discover-luxury-room__box {
   margin-bottom: 40px;
   color: rgb(255, 255, 255);
   background: rgb(34, 34, 34);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 main section.discover div.discover-luxury-room div.discover-luxury-room__box div.discover-luxury-room__img {
   width: 100%;
@@ -1139,6 +1149,7 @@ main section.discover div.discover-rooms {
   width: 100%;
   margin: auto;
   max-width: 650px;
+  margin-bottom: 50px;
 }
 main section.discover div.discover-rooms h2.discover-rooms__h2 {
   background: none;
@@ -1169,6 +1180,8 @@ main section.discover div.discover-rooms div.discover-rooms__icons {
   justify-content: space-evenly;
   padding: 10px;
   position: relative;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
   top: 20px;
   z-index: 2;
 }
@@ -1231,6 +1244,8 @@ main section.discover div.discover-rooms div.discover-rooms__minimal {
   align-items: center;
   margin: 0 auto;
   text-align: center;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
 }
 main section.discover div.discover-rooms div.discover-rooms__minimal h3.discover-rooms-minimal__h3 {
   font-family: "Old Standard TT", sans-serif;
@@ -1268,8 +1283,13 @@ main section.discover div.discover-rooms div.discover-rooms__minimal h2.discover
   main section.discover div.discover-container {
     display: flex;
     flex-direction: row-reverse;
-    background: rgb(249, 249, 249);
     margin-bottom: 80px;
+  }
+  main section.discover div.discover-container div.discover__titlebox {
+    margin-right: 50px;
+    margin-bottom: 50px;
+    width: 80%;
+    padding-bottom: 0;
   }
   main section.discover div.discover-container div.discover__titlebox button.discover-titlebox__button {
     width: 50%;
@@ -1326,11 +1346,16 @@ main section.discover div.discover-rooms div.discover-rooms__minimal h2.discover
     align-items: center;
     width: 100%;
     margin: auto;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
     max-width: 100%;
   }
   main section.discover div.discover-rooms div.discover-rooms__icons {
-    width: 50%;
+    width: 30%;
+    justify-content: space-around;
+  }
+  main section.discover div.discover-rooms div.discover-rooms__icons img.discover-rooms-icons__img {
+    width: 20px;
+    height: 15px;
   }
   main section.discover div.discover-rooms div#swipper-rooms {
     width: 100%;
@@ -1344,7 +1369,7 @@ main section.discover div.discover-rooms div.discover-rooms__minimal h2.discover
     opacity: 1;
   }
   main section.discover div.discover-rooms div#swipper-rooms img.swiper-slide__img {
-    height: 450px;
+    height: 550px;
   }
   main section.discover div.discover-rooms div#swipper-rooms div#swiper-button-prev-rooms {
     width: 80px;
@@ -1446,6 +1471,11 @@ main section.meet-video button.meet-video__button {
   font-weight: 700;
   background: rgb(190, 173, 142);
 }
+main section.meet-video button.meet-video__button a {
+  background: none;
+  color: #fff;
+  padding: 20px;
+}
 @media screen and (min-width: 700px) {
   main section.meet-video button.meet-video__button {
     margin: auto;
@@ -1500,7 +1530,7 @@ main section.meet-video div.meet-video__background-gold-desktop {
   }
   main section.meet-video div.meet-video__container button.meet-video-container__button-dektop {
     display: block;
-    width: 40%;
+    width: 30%;
     padding: 20px;
     margin-bottom: 20px;
     cursor: pointer;
@@ -1511,7 +1541,18 @@ main section.meet-video div.meet-video__background-gold-desktop {
     text-transform: uppercase;
     font-family: "Archivo", sans-serif;
     font-weight: 700;
+    background: none;
+    border: 2px solid gray;
+    transition: 0.5s;
+  }
+  main section.meet-video div.meet-video__container button.meet-video-container__button-dektop:hover {
     background: rgb(190, 173, 142);
+  }
+  main section.meet-video div.meet-video__container button.meet-video-container__button-dektop a {
+    color: #fff;
+    background: none;
+    padding-left: 5px;
+    width: 100px;
   }
   main section.meet-video iframe.meet-video__iframe {
     width: 50%;
@@ -1933,20 +1974,21 @@ main section.menu div.swiper-menu-desktop {
   main section.menu div#swiper-menu-desktop div.slide-menu div.slide-menu__container div.slide-menu__food div.slider-menu-food-container__description {
     width: 60%;
     margin-left: 20px;
+    transition: 0.5s;
   }
-  main section.menu div#swiper-menu-desktop div.slide-menu div.slide-menu__container div.slide-menu__food div.black-bg {
+  main section.menu div#swiper-menu-desktop div.slide-menu div.slide-menu__container div.slide-menu__food div.slider-menu-food-container__description:hover {
     background: rgb(34, 34, 34);
     padding: 10px;
     width: 80%;
     padding-right: 20px;
   }
-  main section.menu div#swiper-menu-desktop div.slide-menu div.slide-menu__container div.slide-menu__food div.black-bg h3.slider-menu-food__h3 {
+  main section.menu div#swiper-menu-desktop div.slide-menu div.slide-menu__container div.slide-menu__food div.slider-menu-food-container__description:hover h3.slider-menu-food__h3 {
     color: rgb(255, 255, 255);
   }
-  main section.menu div#swiper-menu-desktop div.slide-menu div.slide-menu__container div.slide-menu__food div.black-bg p.slider-menu-food__paraph {
+  main section.menu div#swiper-menu-desktop div.slide-menu div.slide-menu__container div.slide-menu__food div.slider-menu-food-container__description:hover p.slider-menu-food__paraph {
     color: rgb(255, 255, 255);
   }
-  main section.menu div#swiper-menu-desktop div.slide-menu div.slide-menu__container div.slide-menu__food div.black-bg img {
+  main section.menu div#swiper-menu-desktop div.slide-menu div.slide-menu__container div.slide-menu__food div.slider-menu-food-container__description:hover img {
     width: 20px;
     background: none;
     position: absolute;
@@ -2197,7 +2239,7 @@ main section.about-us__banner div.about-us-banner__buttons a.banner-buttons__abo
     width: 60%;
   }
   main section.about-us__banner div.about-us-banner__buttons {
-    width: 20%;
+    width: 15%;
     right: -25%;
   }
 }
@@ -2310,9 +2352,9 @@ main section.restaurant {
 }
 main section.restaurant div.restaurant__container {
   width: 90%;
-  box-shadow: 0 14px 24px 0 rgba(184, 184, 184, 0.1);
   height: auto;
   max-width: 750px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 main section.restaurant div.restaurant__container img.restaurant__img {
   height: 232px;
@@ -2850,7 +2892,7 @@ main section.rooms__banner div.rooms__buttons a.banner-buttons__about {
     width: 60%;
   }
   main section.rooms__banner div#rooms__buttons {
-    width: 25%;
+    width: 15%;
     right: -25%;
   }
 }
@@ -3260,10 +3302,17 @@ main section.room-details__type div.modal-rooms-details.modal-rooms-details butt
     justify-content: space-around;
     position: absolute;
     padding: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 5px 0;
+  }
+  main section.room-details__type div.room-details-type__info div.room-details-type-info__container {
+    margin-top: 20px;
   }
   main section.room-details__type img.room-details-type__img {
     width: 50%;
     height: 490px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   }
   main section.room-details__type p.room-details-type__paraph {
     width: 50%;
@@ -3327,6 +3376,7 @@ main section.room-details__amenities div.room-details-amenitie__container div.ro
   }
   main section.room-details__amenities div.room-details-amenitie__container {
     justify-content: center;
+    width: 50%;
   }
   main section.room-details__amenities div.room-details-amenitie__container div.room-details-amenities__icon-container {
     display: flex;
@@ -3335,14 +3385,16 @@ main section.room-details__amenities div.room-details-amenitie__container div.ro
   }
 }
 main div.founder {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   padding: 20px;
   align-items: center;
   margin: auto;
   margin-top: 60px;
+  margin-bottom: 20px;
   max-width: 600px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 main div.founder div.founder__img-container {
   height: 180px;
@@ -3467,6 +3519,7 @@ main section.related-rooms div.rooms-list__room div#swiper-rooms-details {
   width: 100%;
   height: auto;
   margin-bottom: 50px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 main section.related-rooms div.rooms-list__room div#swiper-rooms-details img.swiper-slide__img {
   width: 100%;
@@ -3515,9 +3568,10 @@ main section.related-rooms div.rooms-list__room div#swiper-rooms-details div.dis
   padding: 10px;
   position: relative;
   z-index: 2;
-  top: 285px;
+  top: 280px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   transform: translateX(12%);
-  box-shadow: 0 8px 16px 0 rgba(138, 138, 138, 0.05);
 }
 main section.related-rooms div.rooms-list__room div#swiper-rooms-details div.discover-rooms__icons img.discover-rooms-icons__img {
   width: 15px;
@@ -3551,8 +3605,9 @@ main section.related-rooms div.rooms-list__room div#swiper-rooms-details div.box
 }
 main section.related-rooms div.rooms-list__room div#swiper-rooms-details div.box-container div.rooms-list-room__price-info {
   display: flex;
-  width: 60%;
+  width: 80%;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 main section.related-rooms div.rooms-list__room div#swiper-rooms-details div.box-container div.rooms-list-room__price-info h2.rooms-list-room-price-info__h2 {
   font-family: "Archivo", sans-serif;
@@ -3594,6 +3649,10 @@ main section.related-rooms div.rooms-list__room div#swiper-rooms-details div.box
   main section.related-rooms div.rooms-list__room {
     width: 80%;
   }
+  main section.related-rooms div.rooms-list__room div#swiper-rooms-details {
+    box-shadow: none;
+    margin-top: 50px;
+  }
   main section.related-rooms div.rooms-list__room div.swiper-wrapper__rooms-details {
     width: 100%;
     height: auto;
@@ -3617,9 +3676,9 @@ main section.related-rooms div.rooms-list__room div#swiper-rooms-details div.box
     padding: 10px;
     position: relative;
     z-index: 2;
-    bottom: -390px;
-    right: -30px;
-    box-shadow: 0 8px 16px 0 rgba(138, 138, 138, 0.05);
+    left: 0;
+    top: 280px;
+    box-shadow: none;
   }
   main section.related-rooms div.rooms-list__room div.swiper-wrapper__rooms-details div.discover-rooms__icons img.discover-rooms-icons__img {
     width: 15px;
@@ -3692,6 +3751,7 @@ main section.luxury-rooms-offers {
 }
 main section.luxury-rooms-offers div.luxury-rooms-offers__container {
   width: 100%;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 main section.luxury-rooms-offers div.luxury-rooms-offers__container h3.luxury-rooms-offers-container__h3 {
   font-family: "Archivo", sans-serif;
@@ -3759,10 +3819,9 @@ main section.luxury-rooms-offers div.luxury-rooms-offers__container div.luxury-r
 }
 main section.luxury-rooms-offers button.luxury-rooms-offers-container__button {
   width: 60%;
-  padding: 20px;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  margin-left: 20px;
+  padding: 15px;
+  margin: auto;
+  margin-top: 25px;
   cursor: pointer;
   border: none;
   color: rgb(255, 255, 255);
@@ -3781,8 +3840,9 @@ main section.luxury-rooms-offers button.luxury-rooms-offers-container__button:ho
   border: 2px solid gray;
 }
 main section.luxury-rooms-offers button.luxury-rooms-offers-container__button a {
-  color: rgb(189, 189, 189);
+  color: #fff;
   background: none;
+  padding: 20px;
 }
 main section.luxury-rooms-offers div.luxury-rooms-offers-container__info-price {
   width: 100%;
@@ -3793,6 +3853,7 @@ main section.luxury-rooms-offers div.luxury-rooms-offers-container__info-price {
 main section.luxury-rooms-offers div.luxury-rooms-offers-container__info-price img.luxury-rooms-offers-container-info-price__img {
   width: 100%;
   height: 100%;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 main section.luxury-rooms-offers div.luxury-rooms-offers-container__info-price div.luxury-rooms-offers-container-info-prices__container {
   width: 110px;
@@ -3856,7 +3917,7 @@ main section.luxury-rooms-offers div.luxury-rooms-offers-container__info-price d
   }
   main section.luxury-rooms-offers div.luxury-rooms-offers__container div.container-info h2.luxury-rooms-offers-container__h2 {
     border-bottom: 2px solid rgb(236, 236, 236);
-    width: 200%;
+    width: 100%;
     margin-bottom: 36px;
   }
   main section.luxury-rooms-offers div.luxury-rooms-offers__container div.luxury-rooms-offers-container__amenities {
@@ -3866,6 +3927,7 @@ main section.luxury-rooms-offers div.luxury-rooms-offers-container__info-price d
     width: 100%;
     margin-top: 145px;
     padding: 10px;
+    margin-left: 90px;
   }
   main section.luxury-rooms-offers div.luxury-rooms-offers__container div.luxury-rooms-offers-container__amenities div.container-icons {
     display: flex;
@@ -3880,7 +3942,10 @@ main section.luxury-rooms-offers div.luxury-rooms-offers-container__info-price d
     top: -70px;
     z-index: 2;
     left: 135px;
-    width: 25%;
+    width: 20%;
+    margin: 25px;
+    margin-bottom: 25px;
+    margin-top: 0px;
   }
   main section.luxury-rooms-offers div.luxury-rooms-offers-container__info-price {
     width: 90%;
@@ -3984,6 +4049,9 @@ main section.popular-rooms div.rooms-list__room div#swipper-rooms-offers img.swi
 }
 main section.popular-rooms div.rooms-list__room div#swipper-rooms-offers div.swiper-slide {
   padding-bottom: 15px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  height: auto;
 }
 main section.popular-rooms div.rooms-list__room div#swipper-rooms-offers div#swiper-button-prev-rooms-offers {
   background: rgb(255, 255, 255);
@@ -4027,9 +4095,10 @@ main section.popular-rooms div.rooms-list__room div#swipper-rooms-offers div.dis
   padding: 10px;
   position: absolute;
   z-index: 2;
-  top: 56%;
+  top: 49%;
   transform: translateX(12%);
-  box-shadow: 0 8px 16px 0 rgba(138, 138, 138, 0.05);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }
 main section.popular-rooms div.rooms-list__room div#swipper-rooms-offers div.discover-rooms__icons img.discover-rooms-icons__img {
   width: 15px;
@@ -4064,7 +4133,7 @@ main section.popular-rooms div.rooms-list__room div#swipper-rooms-offers div.box
 }
 main section.popular-rooms div.rooms-list__room div#swipper-rooms-offers div.box-container div.rooms-list-room__price-info {
   display: flex;
-  width: 60%;
+  width: 70%;
   justify-content: space-between;
 }
 main section.popular-rooms div.rooms-list__room div#swipper-rooms-offers div.box-container div.rooms-list-room__price-info h2.rooms-list-room-price-info__h2 {
@@ -4085,13 +4154,14 @@ main section.popular-rooms div.rooms-list__room div#swipper-rooms-offers div.box
   transition: 0.5s;
   border: 2px solid rgb(190, 173, 142);
 }
-main section.popular-rooms div.rooms-list__room div#swipper-rooms-offers div.box-container div.rooms-list-room__price-info button.rooms-list-room-price-info__button:hover {
-  color: rgb(190, 173, 142);
-  border-bottom: 2px solid rgb(190, 173, 142);
-}
 main section.popular-rooms div.rooms-list__room div#swipper-rooms-offers div.box-container div.rooms-list-room__price-info button.rooms-list-room-price-info__button a {
   color: rgb(189, 189, 189);
   background: none;
+  transition: 0.3s;
+}
+main section.popular-rooms div.rooms-list__room div#swipper-rooms-offers div.box-container div.rooms-list-room__price-info button.rooms-list-room-price-info__button a:hover {
+  color: rgb(190, 173, 142);
+  border-bottom: 2px solid rgb(190, 173, 142);
 }
 
 @media screen and (min-width: 1000px) {
@@ -4127,17 +4197,10 @@ main section.popular-rooms div.rooms-list__room div#swipper-rooms-offers div.box
     padding: 10px;
     position: absolute;
     z-index: 2;
-    top: 47%;
     transform: translateX(12%);
-    box-shadow: 0 8px 16px 0 rgba(138, 138, 138, 0.05);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+    top: 46%;
   }
-}
-@media screen and (min-width: 1000px) and (min-width: 1300px) {
-  main section.popular-rooms div.rooms-list__room div#swipper-rooms-offers div.swiper-slide div.discover-rooms__icons {
-    top: 52%;
-  }
-}
-@media screen and (min-width: 1000px) {
   main section.popular-rooms div.rooms-list__room div#swipper-rooms-offers div.swiper-slide div.discover-rooms__icons img.discover-rooms-icons__img {
     width: 15px;
     height: 15px;
@@ -4191,6 +4254,7 @@ main section.popular-rooms div.rooms-list__room div#swipper-rooms-offers div.box
     line-height: 18px;
     color: rgb(189, 189, 189);
     border: none;
+    margin-left: 5px;
   }
   main section.popular-rooms div.rooms-list__room div#swipper-rooms-offers div#swiper-button-prev-rooms-offers {
     display: none;

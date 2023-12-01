@@ -108,7 +108,7 @@
             <div class="swiper-wrapper swiper-wrapper__rooms-offers">
                 @foreach ($two_rooms as $room)
                     <div class="swiper-slide slide-img1">
-                        <div class="discover-rooms__icons" style="top: 52%;">
+                        <div class="discover-rooms__icons">
                             <img class="discover-rooms-icons__img" src="/img/bed-icon.png" alt="bed-icon" />
                             <img class="discover-rooms-icons__img" src="/img/wifi-icon.png" alt="wifi-icon" />
                             <img class="discover-rooms-icons__img" src="/img/car-icon.png" alt="car-icon" />

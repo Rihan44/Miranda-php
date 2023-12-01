@@ -110,7 +110,7 @@
  <?php $__currentLoopData = $two_rooms; $this->addLoop($__currentLoopData);$this->getFirstLoop();
  foreach($__currentLoopData as $room): $loop = $this->incrementLoopIndices();  ?>
  <div class="swiper-slide slide-img1">
- <div class="discover-rooms__icons" style="top: 52%;">
+ <div class="discover-rooms__icons">
  <img class="discover-rooms-icons__img" src="/img/bed-icon.png" alt="bed-icon" />
  <img class="discover-rooms-icons__img" src="/img/wifi-icon.png" alt="wifi-icon" />
  <img class="discover-rooms-icons__img" src="/img/car-icon.png" alt="car-icon" />

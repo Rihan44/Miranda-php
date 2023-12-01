@@ -574,43 +574,67 @@ if(title === 'Rooms'){
 
     activeNav('rooms.php');
 
-    function swiperRooms() {
-        if (window.matchMedia("(min-width: 1000px").matches) {
-            new Swiper(".my__swiper", {
-                direction: "horizontal",
-                slidesPerView: 3,
-                grid: {
-                    rows: 2,
-                },
-                pagination: {
-                    el: ".rooms__swiper-pagination",
-                    clickable: true,
-                    renderBullet: function (index, className) {
-                        return '<span class="' + className + '">' + (index + 1) + "</span>";
-                    },
-                },
-            });
-        } else {
-            new Swiper(".my__swiper", {
-                direction: "vertical",
-                slidesPerView: 3,
-                spaceBetween: 300,
-                pagination: {
-                    el: ".rooms__swiper-pagination",
-                    clickable: true,
-                    renderBullet: function (index, className) {
-                        return '<span class="' + className + '">' + (index + 1) + "</span>";
-                    },
-                },
-            });
-        }
-    }
+    // const swiperRoomsCards = initializeSwiper('.swiper-rooms-cards', {
+    //     direction: 'horizontal',
+    //     loop: false,
+    //     pagination: {
+    //         el: ".swiper-pagination-rooms-cards",
+    //         clickable: true,
+    //         renderBullet: (index, className) => {
+    //             return '<span class="' + className + '">' + (index + 1) + "</span>"
+    //         },
+    //     },
+    //     navigation: {
+    //         nextEl: '.swiper-button-next-rooms-cards',
+    //         prevEl: '.swiper-button-prev-rooms-cards',
+    //     },
+    //     breakpoints: {
+    //         1000: {
+    //             slidesPerView: 3,
+    //             slidesPerGroup: 3,
+    //             slidesPerColumn: 3,
+    //             spaceBetween: 20,
+    //             slidesPerColumnFill: 'column',
+    //             grid: {
+    //                 fill: 'row',
+    //                 rows: 3,
+    //             }
+    //         },
+    //     },
+    // })
 
-    swiperRooms();
+    const swiper = new Swiper('.swiper', {
+        direction: 'horizontal',
+        loop: false,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            renderBullet: (index, className) => {
+                return '<span class="' + className + '">' + (index + 1) + "</span>"
+            },
+        },
+      
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            1000: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+                slidesPerColumn: 3,
+                spaceBetween: 20,
+                slidesPerColumnFill: 'column',
+                grid: {
+                    fill: 'row',
+                    rows: 3,
+                }
+            },
+        },
+ 
+      });
+      
    
-    window.addEventListener('resize', () => {
-        swiperRooms();
-    })
 }
 
 

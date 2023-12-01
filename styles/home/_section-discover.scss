@@ -16,6 +16,8 @@ main {
         flex-direction: column;
         padding: 20px;
         padding-bottom: 120px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+
         h2.discover-titlebox__about {
           width: 100%;
           background: none;
@@ -92,7 +94,7 @@ main {
           height: auto;
           width: 75%;
           background: none;
-          box-shadow: 0 8px 16px 0 rgba(34, 34, 34, 0.02);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
           margin-bottom: 40px;
           position: relative;
           top: -40px;
@@ -156,6 +158,8 @@ main {
           margin-bottom: 40px;
           color: $color-principal;
           background: $color-tercero;
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+
           div.discover-luxury-room__img {
             width: 100%;
             height: auto;
@@ -211,6 +215,7 @@ main {
         width: 100%;
         margin: auto;
         max-width: 650px;
+        margin-bottom: 50px;
         h2.discover-rooms__h2 {
           background: none;
           font-size: 0.875em;
@@ -240,6 +245,8 @@ main {
           justify-content: space-evenly;
           padding: 10px;
           position: relative;
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, .3);
+          border-radius: 10px;
           top: 20px;
           z-index: 2;
           img.discover-rooms-icons__img {
@@ -302,6 +309,8 @@ main {
           align-items: center;
           margin: 0 auto;
           text-align: center;
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, .3);
+          border-radius: 6px;
           h3.discover-rooms-minimal__h3 {
             font-family: $fontSecundaria;
             font-weight: 400;
@@ -341,9 +350,13 @@ main {
         div.discover-container {
           display: flex;
           flex-direction: row-reverse;
-          background: rgba(249, 249, 249, 1);
           margin-bottom: 80px;
           div.discover__titlebox {
+            margin-right: 50px;
+            margin-bottom: 50px;
+            width: 80%;
+            padding-bottom: 0;
+
             button.discover-titlebox__button {
               width: 50%;
               margin-bottom: 40px;
@@ -401,10 +414,15 @@ main {
           align-items: center;
           width: 100%;
           margin: auto;
-          margin-bottom: 30px;
+          margin-bottom: 80px;
           max-width: 100%;
           div.discover-rooms__icons {
-            width: 50%;
+            width: 30%;
+            justify-content: space-around;
+            img.discover-rooms-icons__img {
+              width: 20px;
+              height: 15px;
+            }
           }
           div#swipper-rooms {
             width: 100%;
@@ -417,7 +435,7 @@ main {
               opacity: 1;
             }
             img.swiper-slide__img {
-              height: 450px;
+              height: 550px;
             }
             div#swiper-button-prev-rooms {
               width: 80px;

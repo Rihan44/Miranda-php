@@ -212,27 +212,30 @@ main {
                 div.slider-menu-food-container__description {
                   width: 60%;
                   margin-left: 20px;
+                  transition: 0.5s;
+                  
+                  &:hover {
+                    background: $color-tercero;
+                    padding: 10px;
+                    width: 80%;
+                    padding-right: 20px;
+                    h3.slider-menu-food__h3 {
+                      color: rgba(255, 255, 255, 1);
+                    }
+                    p.slider-menu-food__paraph {
+                      color: rgba(255, 255, 255, 1);
+                    }
+                    img {
+                      width: 20px;
+                      background: none;
+                      position: absolute;
+                      margin-left: 0px;
+                      right: 30px;
+                      top: 190px;
+                    }
+                  }
                 }
-                div.black-bg {
-                  background: $color-tercero;
-                  padding: 10px;
-                  width: 80%;
-                  padding-right: 20px;
-                  h3.slider-menu-food__h3 {
-                    color: rgba(255, 255, 255, 1);
-                  }
-                  p.slider-menu-food__paraph {
-                    color: rgba(255, 255, 255, 1);
-                  }
-                  img {
-                    width: 20px;
-                    background: none;
-                    position: absolute;
-                    margin-left: 0px;
-                    right: 30px;
-                    top: 190px;
-                  }
-                }
+
                 h3.slider-menu-food__h3 {
                   font-weight: 400;
                   font-family: $fontSecundaria;

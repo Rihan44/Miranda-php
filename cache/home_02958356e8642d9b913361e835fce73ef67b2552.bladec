@@ -3,6 +3,7 @@
 
 <?php $this->startSection('content'); ?>
 <section class="banner">
+ <img src="./img/strong_team.jpg" alt="banner" class="banner__img"/>
  <div class="banner__container">
  <h2 class="banner__firstitle">THE ULTIMATE LUXURY EXPERIENCE</h2>
  <h3 class="banner__secondtitle">The Perfect Base For You</h3>
@@ -120,10 +121,17 @@
  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
  exercitation
  ullamco laboris nisi ut aliquip ex ea commodo consequat you have to understand this.</p>
- <button class="meet-video-container__button-dektop">BOOK NOW</button>
+ <button class="meet-video-container__button-dektop">
+ <a href="/rooms.php">
+ ROOMS
+ </a>
+ </button>
  </div>
  <iframe class="meet-video__iframe" src="https://www.youtube.com/embed/Bu3Doe45lcU?si=5QAaDhCSNoHIDPD3&amp;start=25&end=69" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; muted; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
- <button class="meet-video__button">BOOK NOW</button>
+ <button class="meet-video__button">
+ <a href="/rooms.php">
+ ROOMS
+ </a></button>
  <div class="meet-video__background-gold-desktop">
  </div>
 </section>
@@ -290,12 +298,11 @@
  </div>
  <div class="slide-menu__food">
  <img lass="slider-menu-food-container__img" src="img/marmalade.jpeg" alt="marmalade" />
- <div class="slider-menu-food-container__description black-bg">
+ <div class="slider-menu-food-container__description">
  <h3 class="slider-menu-food__h3">Marmalade Selection</h3>
  <p class="slider-menu-food__paraph">Lorem ipsum dolor sit amet, consectetur adip
  isicing
  elit, sed do eiusmod tempor.</p>
- <img class="slider-menu-food-container__img-arrow" src="img/gold-arrow-icon.png" alt="arrow" />
  </div>
  </div>
  <div class="slide-menu__food">
@@ -350,12 +357,11 @@
  </div>
  <div class="slide-menu__food">
  <img lass="slider-menu-food-container__img" src="img/tea&coffe.jpg" alt="tea" />
- <div class="slider-menu-food-container__description black-bg">
+ <div class="slider-menu-food-container__description">
  <h3 class="slider-menu-food__h3">Tea or Coffee</h3>
  <p class="slider-menu-food__paraph">Lorem ipsum dolor sit amet, consectetur adip
  isicing
  elit, sed do eiusmod tempor.</p>
- <img class="slider-menu-food-container__img-arrow" src="img/gold-arrow-icon.png" alt="arrow" />
  </div>
  </div>
  <div class="slide-menu__food">
