@@ -594,7 +594,6 @@ if(title === 'Rooms'){
             new Swiper(".my__swiper", {
                 direction: "vertical",
                 slidesPerView: 3,
-                spaceBetween: 300,
                 pagination: {
                     el: ".rooms__swiper-pagination",
                     clickable: true,
@@ -611,38 +610,6 @@ if(title === 'Rooms'){
     window.addEventListener('resize', () => {
         swiperRooms();
     })
-
-    // const swiper = new Swiper('.swiper', {
-    //     direction: 'horizontal',
-    //     loop: false,
-    //     pagination: {
-    //         el: ".swiper-pagination",
-    //         clickable: true,
-    //         renderBullet: (index, className) => {
-    //             return '<span class="' + className + '">' + (index + 1) + "</span>"
-    //         },
-    //     },
-      
-    //     navigation: {
-    //         nextEl: '.swiper-button-next',
-    //         prevEl: '.swiper-button-prev',
-    //     },
-    //     breakpoints: {
-    //         1000: {
-    //             slidesPerView: 3,
-    //             slidesPerGroup: 3,
-    //             slidesPerColumn: 3,
-    //             spaceBetween: 20,
-    //             slidesPerColumnFill: 'column',
-    //             grid: {
-    //                 fill: 'row',
-    //                 rows: 3,
-    //             }
-    //         },
-    //     },
- 
-    //   });
-      
    
 }
 

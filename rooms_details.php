@@ -2,7 +2,7 @@
 <?php 
 require_once('config.php');
 
-$id_room = $_GET['id'];
+$id_room = htmlspecialchars($_GET['id']);
 
 $sql = "SELECT r.*, 
 COALESCE(rp.room_photo_url, 'https://tinyurl.com/RoomPhoto1') AS URL 

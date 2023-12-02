@@ -46,18 +46,77 @@ main {
       flex-direction: column;
       align-items: center;
 
+      .swiper {
+          width: 400px;
+          max-width: 1300px;
+          height: 1200px;
+          overflow-x: hidden;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 80px;
+          position: relative; 
+      }
+      
+      .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 500px;
+          margin-bottom: 120px;
+      }
+      
+      .rooms__swiper-pagination {
+          height: auto;
+          
+      }
+      
+      .swiper-pagination-bullet {
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        margin-top: 50px;
+        line-height: 20px;
+        font-size: 12px;
+        color: #000;
+        opacity: 1;
+        border-radius: 0;
+        background: rgba(0, 0, 0, 0.2);
+        text-align: center !important;
+      }
+      
+      .swiper-pagination-bullet-active {
+          width: 30px !important;
+          height: 30px !important;
+          line-height: 30px !important;
+          font-size: 16px !important;
+          background-color: #bead8e !important;
+          color: #fff !important;
+          border-radius: 50% !important;
+          text-align: center !important;
+          justify-content: center !important;
+      }
+      
+
       div.rooms-list__room {
         width: 90%;
-        height: auto;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, .3);
+        border-radius: 10px;
+        height: 450px;
+        text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: 50px;
         max-width: 600px;
+
         img.rooms-list-room__img {
+          border-radius: 10px 10px 0px 0px;
+          height: 210px;
+          opacity: 0.850;
           width: 100%;
-          height: 218px;
-          margin-bottom: 40px;
         }
         h3.rooms-list-room__h3 {
           font-family: $fontSecundaria;
@@ -79,7 +138,7 @@ main {
         }
         div.rooms-list-room__price-info {
           display: flex;
-          width: 60%;
+          width: 70%;
           justify-content: space-between;
           h2.rooms-list-room-price-info__h2 {
             font-family: $fontPrincipal;
@@ -112,11 +171,14 @@ main {
         width: 70%;
         background: $color-principal;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
         padding: 10px;
         position: relative;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
         z-index: 2;
-        bottom: -235px;
+        top: -20px;
+
         img.discover-rooms-icons__img {
           width: 15px;
           height: 15px;
@@ -157,6 +219,70 @@ main {
         place-items: center;
         height: auto;
         margin-bottom: 30px;
+
+        .swiper {
+          width: 1400px;
+          max-width: 1300px;
+          height: 1200px;
+          overflow-x: hidden;
+          margin-left: auto;
+          margin-right: auto;
+        }
+  
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            margin-bottom: 10px;
+        }
+  
+        .swiper-pagination.rooms__swiper-pagination {
+            bottom: 100px;
+            display: block;
+        }
+  
+        .swiper-pagination-bullet {
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            margin-top: 50px;
+            line-height: 20px;
+            font-size: 12px;
+            color: #000;
+            opacity: 1;
+            border-radius: 0;
+            background: rgba(0, 0, 0, 0.2);
+        }
+  
+        .swiper-pagination-bullet-active {
+            margin: 0 5px !important;
+            width: 30px !important;
+            height: 30px !important;
+            line-height: 30px !important;
+            font-size: 16px !important;
+            background-color: #bead8e !important;
+            color: #fff !important;
+            border-radius: 50% !important;
+            text-align: center !important;
+            justify-content: center !important;
+        }
+  
+
+        div.rooms-list__room {
+          height: 430px;
+        }
+
+        div.discover-rooms__icons {
+          justify-content: space-around;
+          img.discover-rooms-icons__img {
+            width: 20px;
+            height: 15px;
+          }
+        }
       }
     }
   }
